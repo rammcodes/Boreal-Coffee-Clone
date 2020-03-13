@@ -1,0 +1,24 @@
+.homeview {
+  .homeview-header {
+    height: 100vh;
+    background-color: black;
+    background: url('http://www.borealcoffee.ch/images/thumbnails/1600/936/page/1/background-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    .container {
+      height: 100%;
+      position: relative;
+      margin: auto;
+      .content {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .hero-content {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

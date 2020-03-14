@@ -32,7 +32,19 @@
           color: #fff;
           width: 100%;
           font-size: 20px !important;
+          .down {
+            width: 15px;
+            margin-left: 7px;
+          }
+          .cart,
+          .user {
+            width: 17px;
+            margin-right: 10px;
+          }
         }
+      }
+      .item-md {
+        min-width: 14%;
       }
       .item-lg {
         min-width: 17%;

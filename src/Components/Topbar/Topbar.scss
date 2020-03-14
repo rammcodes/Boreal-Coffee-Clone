@@ -1,4 +1,5 @@
 .topbar {
+  z-index: 1;
   position: absolute;
   width: 100%;
   height: 100px;
@@ -19,19 +20,25 @@
       }
     }
     .nav-items {
+      height: 100%;
       width: 80%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       .item-container {
+        cursor: pointer;
+        position: relative;
         min-width: 10%;
-        border-right: 1px solid whitesmoke;
-        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
         .item {
+          border-right: 1px solid whitesmoke;
           text-align: center;
           color: #fff;
           width: 100%;
           font-size: 20px !important;
+          padding: 0 10px;
           .down {
             width: 15px;
             margin-left: 7px;
@@ -42,7 +49,30 @@
             margin-right: 10px;
           }
         }
+        .item-dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          background-color: black;
+          opacity: 0.9;
+          .item-drop-ele {
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            &:hover {
+              background-color: #E67E22;
+            }
+          }
+        }
+        &:hover {
+          .item-dropdown {
+            display: block;
+          }
+        }
       }
+
       .item-md {
         min-width: 14%;
       }

@@ -25,7 +25,12 @@ const Topbar = () => {
                 className="down"
               />
             </li>
+            <ul className="item-dropdown">
+              <li className="item-drop-ele">GENEVA</li>
+              <li className="item-drop-ele">ZURICH</li>
+            </ul>
           </div>
+
           <div className="item-container">
             <li className="item">
               <span className="txt">SHOP</span>
@@ -35,6 +40,11 @@ const Topbar = () => {
                 className="down"
               />
             </li>
+            <ul className="item-dropdown">
+              <li className="item-drop-ele">FILTER</li>
+              <li className="item-drop-ele">ESPRESSO</li>
+              <li className="item-drop-ele">MERCH</li>
+            </ul>
           </div>
           <div className="item-container item-lg">
             <li className="item">COFFEE CATERING</li>

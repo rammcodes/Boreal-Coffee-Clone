@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center top;
     .container {
+      position: relative;
       height: 100%;
       position: relative;
       margin: auto;
@@ -17,6 +18,46 @@
         transform: translate(-50%, -50%);
         .hero-content {
           text-align: center;
+        }
+        .header-nav-guide {
+          margin: 70px 0 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .nav-btn {
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+            .text {
+              font-weight: bold;
+              font-size: 15px;
+            }
+            .rt-arrow {
+              width: 20px;
+              margin: 0 0 0 10px;
+            }
+          }
+          :first-child {
+            margin-right: 10px;
+          }
+          :last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+      .scroll-container {
+        width: 50px;
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .scroll {
+          max-width: 100%;
         }
       }
     }

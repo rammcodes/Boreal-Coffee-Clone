@@ -15,6 +15,31 @@ class Homeview extends React.Component {
                   alt="hero"
                 />
               </div>
+              <div className="header-nav-guide">
+                <span className="nav-btn">
+                  <span className="text">DISCOVER BOREAL</span>
+                  <img
+                    src={require('../../assets/icons/right-arrow.png')}
+                    alt="right-arrow"
+                    className="rt-arrow"
+                  />
+                </span>
+                <span className="nav-btn">
+                  <span className="text">VISIT OUR WEBSHOP</span>
+                  <img
+                    src={require('../../assets/icons/right-arrow.png')}
+                    alt="right-arrow"
+                    className="rt-arrow"
+                  />
+                </span>
+              </div>
+            </div>
+            <div className="scroll-container">
+              <img
+                src={require('../../assets/icons/scroll.png')}
+                alt="scroll"
+                className="scroll"
+              />
             </div>
           </div>
         </header>

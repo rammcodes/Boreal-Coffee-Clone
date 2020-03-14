@@ -54,9 +54,9 @@
           position: absolute;
           top: 100%;
           width: 100%;
-          background-color: black;
-          opacity: 0.9;
+          background-color: rgba(0,0,0,0.5);
           .item-drop-ele {
+            opacity: 1;
             padding: 15px;
             font-size: 17px;
             font-weight: bold;

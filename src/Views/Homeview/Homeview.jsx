@@ -126,6 +126,9 @@ class Homeview extends React.Component {
             </div>
           </div>
         </section>
+        <section className="brew">
+          <div class="layer"></div>s
+        </section>
       </div>
     )
   }

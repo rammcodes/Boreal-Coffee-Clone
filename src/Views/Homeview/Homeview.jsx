@@ -156,6 +156,25 @@ class Homeview extends React.Component {
             </div>
           </div>
         </section>
+        <div className="shop-highlight">
+          <div className="container">
+            <div className="img-cont">
+              <img
+                src="http://www.borealcoffee.ch/design/themes/boreal/assets/dist/images/content/boreal-coffee.png"
+                alt="coffee"
+                className="coffee"
+              />
+            </div>
+            <div className="details">
+              <p className="text">
+                Like what you see? Curious to taste our lovingly roasted beans?
+              </p>
+              <span className="shop">
+                Take a piece of Boreal home with you. This way to our e-shop
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

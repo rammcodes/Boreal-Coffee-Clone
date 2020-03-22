@@ -131,6 +131,7 @@
   .brew {
     position: relative;
     min-height: 450px;
+    height: auto;
     background: url('http://www.borealcoffee.ch/design/themes/boreal/assets/dist/videos/latte.jpg');
     background-size: cover;
     background-position: top left;
@@ -204,7 +205,7 @@
     }
   }
   .shop-highlight {
-    background: #000000;
+    background: #2c2c2d;
 
     .container {
       max-width: 1000px;
@@ -306,7 +307,8 @@
     }
     .brew {
       .content {
-        width: 90%;
+        left: 50%;
+        width: 100%;
         transform: translate(-50%);
       }
     }
@@ -341,10 +343,66 @@
                 margin-bottom: 20px;
               }
               .discover {
-                
                 margin: 30px auto 0 auto;
               }
             }
+          }
+        }
+      }
+    }
+    .brew {
+      min-height: 550px;
+      padding: 0px 0 0px 0;
+      .content {
+        padding: 50px 20px 20px 20px;
+        .short-title {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .title {
+          text-align: center;
+        }
+        .org-line {
+          margin: auto;
+          margin-bottom: 20px;
+        }
+        .text {
+          font-size: 1.1rem;
+          line-height: 30px;
+          text-align: justify;
+        }
+        .img-and-buy {
+          flex-direction: column;
+          border: none;
+          .img-cont {
+            width: 100%;
+            border: none;
+
+            .img-acc {
+              width: 90%;
+            }
+          }
+        }
+        .buy {
+          width: 100%;
+        }
+      }
+    }
+    .shop-highlight {
+      padding: 30px 0;
+      .container {
+        flex-direction: column;
+        .img-cont {
+          transform: translate(0, 0);
+          margin-bottom: 20px;
+        }
+        .details {
+          .text {
+            line-height: 30px;
+            font-size: 1rem;
+          }
+          .shop {
+            line-height: 30px;
           }
         }
       }

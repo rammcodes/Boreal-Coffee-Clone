@@ -261,6 +261,16 @@
   }
 }
 
+@media (max-width: 1350px) {
+  .homeview {
+    .brew {
+      .content {
+        transform: translate(-10%);
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .homeview {
     .story {
@@ -286,6 +296,12 @@
             padding: 30px 10px 0 20px;
           }
         }
+      }
+    }
+    .brew {
+      .content {
+        width: 90%;
+        transform: translate(-50%);
       }
     }
   }

@@ -351,7 +351,7 @@
       }
     }
     .brew {
-      min-height: 550px;
+      min-height: 500px;
       padding: 0px 0 0px 0;
       .content {
         padding: 50px 20px 20px 20px;
@@ -384,7 +384,7 @@
           }
         }
         .buy {
-          width: 100%;
+          width: 100% !important;
         }
       }
     }
@@ -406,6 +406,15 @@
           }
         }
       }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .homeview {
+    .brew {
+      height: 550px;
     }
   }
 }

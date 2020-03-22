@@ -12,7 +12,7 @@ const Topbar = () => {
             alt="logo"
           />
         </div>
-        <div className="nav-items">
+        <div className="nav-items large">
           <div className="item-container item-lg">
             <li className="item">WHO WE ARE?</li>
           </div>
@@ -74,6 +74,35 @@ const Topbar = () => {
                 src={require('../../assets/icons/down.png')}
                 alt="down"
                 className="down"
+              />
+            </li>
+          </div>
+        </div>
+        <div className="nav-items small">
+          <div className="item-container">
+            <li className="item">
+              <img
+                src={require('../../assets/icons/bag.png')}
+                alt="cart"
+                className="icon"
+              />
+            </li>
+          </div>
+          <div className="item-container">
+            <li className="item">
+              <img
+                src={require('../../assets/icons/user.png')}
+                alt="cart"
+                className="icon"
+              />
+            </li>
+          </div>
+          <div className="item-container">
+            <li className="item">
+              <img
+                src={require('../../assets/icons/menu.png')}
+                alt="cart"
+                className="icon"
               />
             </li>
           </div>

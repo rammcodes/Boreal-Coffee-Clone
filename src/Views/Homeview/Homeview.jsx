@@ -13,6 +13,7 @@ class Homeview extends React.Component {
                 <img
                   src="http://www.borealcoffee.ch/design/themes/boreal/assets/dist/images/content/home-hero.png"
                   alt="hero"
+                  className="hero-design"
                 />
               </div>
               <div className="header-nav-guide">

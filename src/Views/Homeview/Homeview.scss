@@ -315,6 +315,33 @@
   }
 }
 
+@media (max-width: 900px) {
+  .homeview {
+    .homeview-header {
+      .container {
+        .content {
+          width: 90%;
+          .hero-content {
+            .hero-design {
+              width: 100%;
+            }
+          }
+          .header-nav-guide {
+            flex-direction: column;
+            width: 100%;
+            .nav-btn {
+              border-width: 1px;
+              margin-bottom: 100px;
+              margin: 0 0 0px 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .homeview {
     .story {
@@ -409,7 +436,6 @@
     }
   }
 }
-
 
 @media (max-width: 500px) {
   .homeview {

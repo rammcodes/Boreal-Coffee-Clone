@@ -2,7 +2,6 @@ import React from 'react'
 import './Homeview.scss'
 
 class Homeview extends React.Component {
-  state = {}
   render() {
     return (
       <div className="homeview">
@@ -128,7 +127,7 @@ class Homeview extends React.Component {
           </div>
         </section>
         <section className="brew">
-          <div class="layer"></div>
+          <div className="layer"></div>
           <div className="content">
             <h4 className="short-title">JEBREW</h4>
             <h2 className="title">CAN'T MAKE IT BOREAL?</h2>

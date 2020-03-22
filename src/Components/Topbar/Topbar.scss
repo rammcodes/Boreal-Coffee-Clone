@@ -85,6 +85,9 @@
       display: none;
     }
   }
+  .res-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -111,12 +114,37 @@
             border-right: none;
             line-height: 0;
             .icon {
-              width: 100%;
+              width: 50%;
               height: 100%;
             }
           }
-          &:nth-child(1){
+          &:nth-child(1) {
             border-left: none;
+          }
+        }
+      }
+    }
+    .res-menu {
+      display: block;
+      position: fixed;
+      z-index: 5;
+      top: 100px;
+      height: calc(100vh - 100px);
+      background-color: #333;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .topbar {
+    .container {
+      .small {
+        .item-container {
+          .item {
+            .icon {
+              width: 100%;
+            }
           }
         }
       }

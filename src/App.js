@@ -1,6 +1,6 @@
 import React from 'react'
 import Homeview from './Views/Homeview/Homeview'
-import './App.css'
+import './App.scss'
 import Topbar from './Components/Topbar/Topbar'
 
 class App extends React.Component {

@@ -25,7 +25,7 @@ class Topbar extends React.Component {
           </div>
           <div className="nav-items large">
             <div className="item-container item-lg">
-              <li className="item">WHO WE ARE???</li>
+              <li className="item">WHO WE ARE?</li>
             </div>
             <div className="item-container">
               <li className="item">

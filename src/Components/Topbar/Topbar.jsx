@@ -1,11 +1,11 @@
 import React from 'react'
 import './Topbar.scss'
+import { Link } from 'react-router-dom'
 
 class Topbar extends React.Component {
   state = {
     showResMenu: false
   }
-
 
   resMenuClick = () => {
     this.setState({ showResMenu: !this.state.showResMenu })
@@ -119,7 +119,85 @@ class Topbar extends React.Component {
             </div>
           </div>
         </div>
-        {showResMenu ? <div className="res-menu">.</div> : null}
+        {showResMenu ? (
+          <div className="res-menu">
+            <div className="res-menu-container">
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  WHO WE ARE?
+                </Link>
+              </div>
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  CAFES
+                </Link>
+                <div className="sub">
+                  <Link to="#" className="sub-name">
+                    GENEVA
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Rue du Stand
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Mont-Blanc 17
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Eaux-Vives
+                  </Link>
+                </div>
+                <div className="sub">
+                  <Link to="#" className="sub-name">
+                    Zurich
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Talacker
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Oerlikon
+                  </Link>
+                </div>
+              </div>
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  SHOP
+                </Link>
+                <div className="sub">
+                  <Link to="#" className="sub-link">
+                    Filter
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Espresso
+                  </Link>
+                  <Link to="#" className="sub-link">
+                    Merchandise
+                  </Link>
+                </div>
+              </div>
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  COFFEE CATERING
+                </Link>
+              </div>
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  CONTACT
+                </Link>
+              </div>
+              <div className="ele">
+                <Link to="#" className="main-link">
+                  TERMS & CONDITIONS
+                </Link>
+              </div>
+              <div onClick={this.resMenuClick} className="close">
+                <img
+                  src={require('../../assets/icons/close.png')}
+                  alt="close"
+                  className="icon"
+                />
+              </div>
+            </div>
+          </div>
+        ) : null}
       </nav>
     )
   }

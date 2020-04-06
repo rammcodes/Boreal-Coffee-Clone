@@ -69,14 +69,14 @@
   .products-list {
     .container {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto 100px auto;
       .products {
         display: grid;
         grid-template-columns: repeat(4, 25%);
         .product {
           text-transform: uppercase;
           text-align: center;
-          margin:  0 0 30px 0;
+          margin: 0 0 30px 0;
           .prd-img-cont {
             width: 100%;
             margin: 0 0 20px 0;
@@ -99,6 +99,57 @@
           .prd-cat {
             font-weight: lighter;
           }
+        }
+      }
+    }
+  }
+  .sub-and-discover {
+    margin: 0 0 100px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-transform: uppercase;
+    .sub {
+      color: #fff;
+      padding: 50px 20px;
+      background: #f78f1e;
+      .msg {
+        margin: 10px 0 20px 0;
+        font-size: 1.7rem;
+        line-height: 40px;
+      }
+      .form {
+        display: flex;
+        .email-input {
+          width: 70%;
+          background: transparent;
+          border: 1px solid #fff;
+          padding: 20px;
+          font-size: 1.2rem;
+          color: #fff;
+        }
+        .submit {
+          border: none;
+          background: #fff;
+          width: 30%;
+          color: #f78f1e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .text {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 0 10px 0 0;
+          }
+          .right-arrow {
+            width: 20px;
+          }
+        }
+        input::-webkit-input-placeholder {
+          color: #fff;
+        }
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+          color: #fff;
         }
       }
     }

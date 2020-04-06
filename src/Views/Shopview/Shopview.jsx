@@ -56,6 +56,31 @@ class Shopview extends Component {
             </div>
           </div>
         </div>
+        <div className="sub-and-discover">
+          <div className="sub">
+            <h4 className="title">BOREAL NEWSLETTER</h4>
+            <h2 className="msg">
+              Enter your email address to receive our occasional updates and
+              e-vouchers
+            </h2>
+            <form action="" className="form">
+              <input
+                placeholder="name@email.com"
+                type="text"
+                className="email-input"
+              />
+              <button className="submit" type="submit">
+                <span className="text">SUBSCRIBE</span>
+                <img
+                  src={require('../../assets/icons/right-arrow.png')}
+                  alt="right-arrow"
+                  className="right-arrow"
+                />
+              </button>
+            </form>
+          </div>
+          <div className="discover"></div>
+        </div>
       </div>
     )
   }

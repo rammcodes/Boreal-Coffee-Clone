@@ -221,3 +221,19 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .topbar {
+    height: 70px;
+    .container {
+      .logo-container {
+        .logo {
+          max-width: 100%;
+        }
+      }
+    }
+    .res-menu {
+      top: 70px;
+    }
+  }
+}

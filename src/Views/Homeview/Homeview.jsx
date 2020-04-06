@@ -302,7 +302,7 @@ class Homeview extends React.Component {
               />
             </div>
           </div>
-        </footer>
+        </footer> 
       </div>
     )
   }

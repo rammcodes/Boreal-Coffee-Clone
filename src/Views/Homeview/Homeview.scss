@@ -245,7 +245,7 @@
       }
     }
     .main-details {
-      padding: 50px 0;
+      padding: 50px 0 0 0;
       .container {
         max-width: 1200px;
         margin: auto;
@@ -362,6 +362,26 @@
               }
             }
           }
+        }
+      }
+    }
+    .down {
+      padding: 10px 0 50px 0;
+      margin: auto;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      .copyright {
+        color: #333;
+        font-weight: lighter;
+        margin: 0 200px 0 0;
+        font-size: 0.9rem;
+      }
+      .payment-opts {
+        display: flex;
+        align-items: center;
+        .pay-opt {
+          width: 30px;
         }
       }
     }

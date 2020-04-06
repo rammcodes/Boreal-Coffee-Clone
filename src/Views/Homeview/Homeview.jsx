@@ -280,6 +280,28 @@ class Homeview extends React.Component {
               </div>
             </div>
           </div>
+          <div className="down">
+            <span className="copyright">
+              Copyright © 2015 - 2020 Boréal Coffee Shop. All rights reserved.
+            </span>
+            <div className="payment-opts">
+              <img
+                src="https://img.icons8.com/color/48/000000/visa.png"
+                alt="pay-opt"
+                className="pay-opt"
+              />
+              <img
+                src="https://img.icons8.com/color/48/000000/mastercard.png"
+                alt="pay-opt"
+                className="pay-opt"
+              />
+              <img
+                src="https://img.icons8.com/color/48/000000/amex.png"
+                alt="pay-opt"
+                className="pay-opt"
+              />
+            </div>
+          </div>
         </footer>
       </div>
     )

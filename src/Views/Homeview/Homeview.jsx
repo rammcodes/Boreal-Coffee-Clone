@@ -230,14 +230,14 @@ class Homeview extends React.Component {
                   <div className="lang-and-curr">
                     <div className="lang">
                       <h4 className="title">LANGUAGE</h4>
-                      <select value="en">
+                      <select>
                         <option value="en">EN</option>
                         <option value="fr">FR</option>
                       </select>
                     </div>
                     <div className="curr">
                       <h4 className="title">CURRENCY</h4>
-                      <select value="chf">
+                      <select>
                         <option value="chf">CHF</option>
                         <option value="eur">EUR</option>
                       </select>

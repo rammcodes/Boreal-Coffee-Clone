@@ -4,24 +4,41 @@ import { Link } from 'react-router-dom'
 
 class Topbar extends React.Component {
   state = {
-    showResMenu: false
+    showResMenu: false,
+    scrolled: false,
   }
 
   resMenuClick = () => {
     this.setState({ showResMenu: !this.state.showResMenu })
   }
 
+  componentDidMount() {
+    document.addEventListener('scroll', (e) => {
+      if (window.scrollY > 200) {
+        this.setState({ scrolled: true })
+      } else this.setState({ scrolled: false })
+    })
+  }
+
   render() {
-    const { showResMenu } = this.state
+    const { showResMenu, scrolled } = this.state
     return (
-      <nav className="topbar">
+      <nav className={`topbar ${scrolled ? 'topbarInv' : ''}`}>
         <div className="container">
           <div className="logo-container">
-            <img
-              src={require('../../assets/img/logo.png')}
-              className="logo"
-              alt="logo"
-            />
+            {scrolled ? (
+              <img
+                src={require('../../assets/img/black-logo.png')}
+                className="logo"
+                alt="logo"
+              />
+            ) : (
+              <img
+                src={require('../../assets/img/logo.png')}
+                className="logo"
+                alt="logo"
+              />
+            )}
           </div>
           <div className="nav-items large">
             <div className="item-container item-lg">

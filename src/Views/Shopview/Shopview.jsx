@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import products from '../../data/products'
 import './Shopview.scss'
 
 class Shopview extends Component {
-  state = {}
+  state = {
+    products,
+  }
   render() {
+    const { products } = this.state
     return (
       <div className="shopview">
         <div className="route-info">
@@ -33,6 +37,22 @@ class Shopview extends Component {
                 <li className="item">ESPRESSO</li>
                 <li className="item">MERCHANDISE</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="products-list">
+          <div className="container">
+            <div className="products">
+              {products.map((prd) => (
+                <div className="product">
+                  <div className="prd-img-cont">
+                    <img src={prd.img} alt="product" className="prd-img" />
+                  </div>
+                  <h4 className="prd-name">{prd.name}</h4>
+                  <h4 className="prd-price">{prd.rate}</h4>
+                  <p className="prd-cat">{prd.category}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

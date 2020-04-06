@@ -13,11 +13,11 @@ class Topbar extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', (e) => {
-      if (window.scrollY > 200) {
-        this.setState({ scrolled: true })
-      } else this.setState({ scrolled: false })
-    })
+    // document.addEventListener('scroll', (e) => {
+    //   if (window.scrollY > 200) {
+    //     this.setState({ scrolled: true })
+    //   } else this.setState({ scrolled: false })
+    // })
   }
 
   render() {

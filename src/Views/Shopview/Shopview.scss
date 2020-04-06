@@ -1,0 +1,69 @@
+.shopview {
+  padding-top: 120px;
+  .route-info {
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      .route-list {
+        .route,
+        .arrow-right {
+          margin-right: 10px;
+          font-size: 1rem;
+          font-weight: lighter;
+          color: #444;
+          text-transform: uppercase;
+        }
+        .arrow-right {
+          font-size: 1.2rem;
+        }
+        .active {
+          color: #f78f1e;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .msg-and-sort {
+    text-transform: uppercase;
+    .container {
+      max-width: 1200px;
+      margin: 80px auto;
+      .msg {
+        text-align: center;
+        margin: 0 0 30px 0;
+        .hl {
+          color: #f78f1e;
+          font-size: 1rem;
+          margin: 0 0 10px 0;
+        }
+        .main {
+          font-size: 2.2rem;
+        }
+      }
+      .sort {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        .sort-by-list {
+          margin: 0 0 0 20px;
+          display: flex;
+          align-items: center;
+          .item {
+            padding: 0 20px;
+            border-right: 1px solid #8d8e8d;
+            font-weight: bold;
+            color: #8d8e8d;
+            cursor: pointer;
+            &:last-child {
+              border: none;
+            }
+          }
+          .active {
+            color: #f78f1e;
+          }
+        }
+      }
+    }
+  }
+}

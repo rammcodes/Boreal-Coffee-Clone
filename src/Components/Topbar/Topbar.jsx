@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 class Topbar extends React.Component {
   state = {
     showResMenu: false,
-    scrolled: false,
+    scrolled: true,
   }
 
   resMenuClick = () => {

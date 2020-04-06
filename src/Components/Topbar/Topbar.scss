@@ -4,6 +4,7 @@
   width: 100%;
   height: 100px;
   font-family: 'Bebas Neue', cursive;
+  transition: 0.5s;
   .container {
     max-width: 1200px;
     height: 100%;
@@ -103,46 +104,10 @@
           width: 100%;
           font-size: 20px !important;
           padding: 0 10px;
-          .down {
-            width: 15px;
-            margin-left: 7px;
-          }
-          .cart,
-          .user {
-            width: 17px;
-            margin-right: 10px;
-          }
         }
         .item-dropdown {
-          display: none;
-          position: absolute;
-          top: 100%;
-          min-width: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-          .item-drop-ele {
-            letter-spacing: 1px;
-            opacity: 1;
-            padding: 15px;
-            font-size: 17px;
-            font-weight: bold;
-            color: #fff;
-            &:hover {
-              background-color: #f78f1e;
-            }
-          }
+          background-color: rgba(0, 0, 0, 0.8);
         }
-        &:hover {
-          .item-dropdown {
-            display: block;
-          }
-        }
-      }
-
-      .item-md {
-        min-width: 14%;
-      }
-      .item-lg {
-        min-width: 17%;
       }
     }
     .small {

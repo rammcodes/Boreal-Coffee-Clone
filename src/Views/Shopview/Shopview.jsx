@@ -79,7 +79,20 @@ class Shopview extends Component {
               </button>
             </form>
           </div>
-          <div className="discover"></div>
+          <div className="discover">
+            <div className="container">
+              <h4 className="que">You prefer to buy your coffee in person?</h4>
+              <h2 className="msg">just visit one of our shops</h2>
+              <button className="discover">
+                <span className="text">Discover Boréal</span>
+                <img
+                  src={require('../../assets/icons/right-arrow.png')}
+                  alt="right-arrow"
+                  className="right-arrow"
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     )

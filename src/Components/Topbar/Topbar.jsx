@@ -12,12 +12,19 @@ class Topbar extends React.Component {
     this.setState({ showResMenu: !this.state.showResMenu })
   }
 
+  shouldTopbarChange = () => {
+    document.addEventListener('scroll', (e) => {
+      const { topBarEffect } = this.props
+      if (topBarEffect) {
+        if (window.scrollY > 200) {
+          this.setState({ scrolled: true })
+        } else this.setState({ scrolled: false })
+      }
+    })
+  }
+
   componentDidMount() {
-    // document.addEventListener('scroll', (e) => {
-    //   if (window.scrollY > 200) {
-    //     this.setState({ scrolled: true })
-    //   } else this.setState({ scrolled: false })
-    // })
+    this.shouldTopbarChange()
   }
 
   render() {

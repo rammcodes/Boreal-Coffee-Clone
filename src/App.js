@@ -6,11 +6,21 @@ import Shopview from './Views/Shopview/Shopview'
 import Footer from './Components/Footer/Footer'
 
 class App extends React.Component {
+  state = {
+    topBarEffect: true,
+  }
+
+  toggleTopbarEffect = (val) => {
+    this.setState({ topBarEffect: val })
+  }
+
   render() {
+    const { topBarEffect } = this.state
+    const { toggleTopbarEffect } = this
     return (
       <div className="app">
-        <Topbar />
-        <Shopview />
+        <Topbar topBarEffect={topBarEffect} />
+        <Shopview toggleTopbarEffect={toggleTopbarEffect} />
         <Footer />
       </div>
     )

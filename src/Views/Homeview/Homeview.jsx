@@ -2,6 +2,11 @@ import React from 'react'
 import './Homeview.scss'
 
 class Homeview extends React.Component {
+  componentDidMount() {
+    const { toggleTopbarEffect } = this.props
+    toggleTopbarEffect(true)
+  }
+
   render() {
     return (
       <div className="homeview">

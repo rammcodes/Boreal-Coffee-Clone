@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Topbar />
-        <Homeview />
+        <Shopview />
         <Footer />
       </div>
     )

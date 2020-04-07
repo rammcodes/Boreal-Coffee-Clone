@@ -8,17 +8,16 @@
         .route,
         .arrow-right {
           margin-right: 10px;
-          font-size: 1rem;
-          font-weight: lighter;
-          color: #444;
+          font-size: 0.8rem;
+          font-weight: bold;
+          color: #8d8e8d;
           text-transform: uppercase;
         }
         .arrow-right {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
         .active {
           color: #f78f1e;
-          font-weight: normal;
         }
       }
     }

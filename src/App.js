@@ -1,26 +1,18 @@
 import React from 'react'
-import Homeview from './Views/Homeview/Homeview'
-import './App.scss'
+import { Route } from 'react-router-dom'
 import Topbar from './Components/Topbar/Topbar'
+import Homeview from './Views/Homeview/Homeview'
 import Shopview from './Views/Shopview/Shopview'
 import Footer from './Components/Footer/Footer'
+import './App.scss'
 
 class App extends React.Component {
-  state = {
-    topBarEffect: true,
-  }
-
-  toggleTopbarEffect = (val) => {
-    this.setState({ topBarEffect: val })
-  }
-
   render() {
-    const { topBarEffect } = this.state
-    const { toggleTopbarEffect } = this
     return (
       <div className="app">
-        <Topbar topBarEffect={topBarEffect} />
-        <Shopview toggleTopbarEffect={toggleTopbarEffect} />
+        <Topbar/>
+        <Route exact path="/" render={(props) => <Homeview {...props} />} />
+        <Route path="/shop" render={(props) => <Shopview {...props} />} />
         <Footer />
       </div>
     )

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 class Topbar extends React.Component {
   state = {
     showResMenu: false,
-    scrolled: true,
+    scrolled: false,
   }
 
   resMenuClick = () => {
@@ -14,12 +14,9 @@ class Topbar extends React.Component {
 
   shouldTopbarChange = () => {
     document.addEventListener('scroll', (e) => {
-      const { topBarEffect } = this.props
-      if (topBarEffect) {
-        if (window.scrollY > 200) {
-          this.setState({ scrolled: true })
-        } else this.setState({ scrolled: false })
-      }
+      if (window.scrollY > 200) {
+        this.setState({ scrolled: true })
+      } else this.setState({ scrolled: false })
     })
   }
 
@@ -32,7 +29,7 @@ class Topbar extends React.Component {
     return (
       <nav className={`topbar ${scrolled ? 'topbarInv' : ''}`}>
         <div className="container">
-          <div className="logo-container">
+          <Link to="/" className="logo-container">
             {scrolled ? (
               <img
                 src={require('../../assets/img/black-logo.png')}
@@ -46,7 +43,7 @@ class Topbar extends React.Component {
                 alt="logo"
               />
             )}
-          </div>
+          </Link>
           <div className="nav-items large">
             <div className="item-container item-lg">
               <li className="item">WHO WE ARE?</li>
@@ -66,7 +63,7 @@ class Topbar extends React.Component {
               </ul>
             </div>
 
-            <div className="item-container">
+            <Link to="/shop" className="item-container">
               <li className="item">
                 <span className="txt">SHOP</span>
                 <img
@@ -76,11 +73,17 @@ class Topbar extends React.Component {
                 />
               </li>
               <ul className="item-dropdown">
-                <li className="item-drop-ele">FILTER</li>
-                <li className="item-drop-ele">ESPRESSO</li>
-                <li className="item-drop-ele">MERCHANDISE</li>
+                <Link to="/shop" className="item-drop-ele">
+                  FILTER
+                </Link>
+                <Link to="/shop" className="item-drop-ele">
+                  ESPRESSO
+                </Link>
+                <Link to="/shop" className="item-drop-ele">
+                  MERCHANDISE
+                </Link>
               </ul>
-            </div>
+            </Link>
             <div className="item-container item-lg">
               <li className="item">COFFEE CATERING</li>
             </div>

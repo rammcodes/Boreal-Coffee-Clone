@@ -8,8 +8,7 @@ class Shopview extends Component {
   }
 
   componentDidMount() {
-    const { toggleTopbarEffect } = this.props
-    toggleTopbarEffect(false)
+    window.scroll(0,0)
   }
 
   render() {

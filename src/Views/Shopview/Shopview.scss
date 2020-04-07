@@ -179,10 +179,214 @@
             margin: 0 10px 0 0;
           }
           .right-arrow {
-              width: 30px;
+            width: 30px;
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .shopview {
+    .route-info {
+      .container {
+        width: 90%;
+      }
+    }
+    .sub-and-discover {
+      grid-template-columns: 100%;
+      .discover {
+        .container {
+          padding: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .shopview {
+    .route-info {
+      display: none;
+    }
+    .products-list {
+      .container {
+        .products {
+          grid-template-columns: repeat(3, 33.3%);
+        }
+      }
+    }
+    .sub-and-discover {
+      .sub {
+        color: #fff;
+        padding: 30px;
+        background: #f78f1e;
+        .title {
+          font-size: 0.8rem;
+        }
+        .msg {
+          margin: 10px 0 20px 0;
+          font-size: 1.3rem;
+          line-height: 30px;
+        }
+        .form {
+          display: flex;
+          .email-input {
+            padding: 10px 20px;
+            font-size: 1rem;
+            width: 60%;
+          }
+          .submit {
+            width: 40%;
+            .text {
+              margin: 0 10px 0 0;
+            }
+            .right-arrow {
+              width: 10px;
+            }
+          }
+        }
+      }
+      .discover {
+        .container {
+          .que {
+            font-size: 0.8rem;
+            margin: 0 0 10px 0;
+          }
+          .msg {
+            font-size: 1.6rem;
+            margin: 0 0 20px 0;
+          }
+          .discover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            .text {
+              font-size: 0.9rem;
+            }
+            .right-arrow {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .shopview {
+    .products-list {
+      .container {
+        .products {
+          grid-template-columns: repeat(2, 50%);
+        }
+      }
+    }
+    .msg-and-sort {
+      .container {
+        margin: 0px auto 30px auto;
+        .msg {
+          .hl {
+            font-size: 0.8rem;
+            width: 90%;
+            margin: 0 auto 20px auto;
+            line-height: 20px;
+          }
+          .main {
+            font-size: 1.5rem;
+            width: 90%;
+            margin: auto;
+            line-height: 35px;
+          }
+        }
+        .sort {
+          .txt {
+            display: none;
+          }
+          .sort-by-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            .item {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .shopview {
+    .products-list {
+      .container {
+        .products {
+          grid-template-columns: repeat(1, 100%);
+          .product {
+            .prd-img-cont {
+              .prd-img {
+                width: 85%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .msg-and-sort {
+      .container {
+        .sort {
+          .txt {
+            display: none;
+          }
+          .sort-by-list {
+            flex-wrap: wrap;
+            justify-content: center;
+            .item {
+              margin: 0 0 10px 0;
+            }
+          }
+        }
+      }
+    }
+    .sub-and-discover {
+      .sub {
+        color: #fff;
+        padding: 30px;
+        background: #f78f1e;
+        .title {
+          font-size: 0.7rem;
+        }
+        .msg {
+          margin: 10px 0 20px 0;
+          font-size: 1.1rem;
+          line-height: 30px;
+        }
+        .form {
+          display: flex;
+          .email-input {
+            padding: 10px 20px;
+            font-size: 1rem;
+            width: 60%;
+          }
+          .submit {
+            width: 40%;
+            .text {
+              margin: 0 10px 0 0;
+              font-size: 0.7rem;
+            }
+            .right-arrow {
+              width: 10px;
+            }
+          }
+        }
+      }
+  
     }
   }
 }

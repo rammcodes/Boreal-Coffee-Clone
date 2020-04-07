@@ -340,6 +340,17 @@
     }
     .msg-and-sort {
       .container {
+        .msg {
+          .hl {
+            font-size: 0.7rem;
+            margin: 0 auto 5px auto;
+            line-height: 15px;
+          }
+          .main {
+            font-size: 1.4rem;
+            line-height: 30px;
+          }
+        }
         .sort {
           .txt {
             display: none;
@@ -354,6 +365,7 @@
         }
       }
     }
+
     .sub-and-discover {
       .sub {
         color: #fff;
@@ -386,7 +398,6 @@
           }
         }
       }
-  
     }
   }
 }

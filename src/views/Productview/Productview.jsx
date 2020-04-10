@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
-import './Productview.scss'
 import Routeinfo from '../../components/Routeinfo/Routeinfo'
+import Productslist from '../../components/Productslist/Productslist'
+import products from '../../data/products'
+import './Productview.scss'
 
 class Productview extends Component {
-  state = {}
+  state = {
+    products,
+  }
 
   componentDidMount() {
     window.scroll(0, 0)
     this.props.topbarEffectToggle(false)
   }
 
+  limitProducts = (products) => {
+    let limitedProducts = products.filter((prd, idx) => idx < 4)
+    return limitedProducts
+  }
+
   render() {
+    const { products } = this.state
     return (
       <div className="product-view">
         <Routeinfo />
@@ -38,7 +48,7 @@ class Productview extends Component {
                     <div className="info">
                       <div className="icon-cont">
                         <img
-                          src="https://img.icons8.com/color/48/000000/handshake.png"
+                          src={require('../../assets/icons/handshake.png')}
                           className="icon"
                           alt="handshake"
                         />
@@ -46,11 +56,61 @@ class Productview extends Component {
                       <span className="txt">LEARN ABOUT DIRECT TRADE</span>
                     </div>
                   </div>
+                  <div className="detail-cont">
+                    <p className="detail">
+                      We have been importing this Organic coffee direct from the
+                      cooperative Taramesa in the region of
+                      Sidama with our colleague from Roasters United for several
+                      years now. This coffee is very delicate, fruity with a
+                      fresh finish. It is very interesting also in light roast
+                      for V60, aeropress, etc. It is more on the blue fruits
+                      side than on the espresso roast. This coffee is organic
+                      certified by bio-inspecta.
+                    </p>
+                  </div>
+                </div>
+                <div className="qty-checkout">
+                  <div className="text">QUANTITY:</div>
+                  <div className="item-count">1</div>
+                  <div className="inc-dec">
+                    <div className="inc">
+                      <img
+                        src={require('../../assets/icons/plus.png')}
+                        alt="plus"
+                        className="icon"
+                      />
+                    </div>
+                    <div className="dec">
+                      <img
+                        src={require('../../assets/icons/subtract.png')}
+                        alt="subtract"
+                        className="icon"
+                      />
+                    </div>
+                  </div>
+                  <button className="cart-add">
+                    <span className="txt">ADD TO CART</span>
+                    <img
+                      src={require('../../assets/icons/right-arrow.png')}
+                      alt="right-arrow"
+                      className="icon"
+                    />
+                  </button>
+                </div>
+                <div className="ship-info">
+                  Roasts & ships from our Geneva roastery on Tuesdays
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="msg">
+          <h3 className="hl">
+            Our dear coffee loving customer, perhaps you would be
+          </h3>
+          <h2 className="main">interested in some of our amazing coffees?</h2>
+        </div>
+        <Productslist products={this.limitProducts(products)} />
       </div>
     )
   }

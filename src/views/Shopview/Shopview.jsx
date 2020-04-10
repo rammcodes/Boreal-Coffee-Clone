@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import products from '../../data/products'
-import './Shopview.scss'
 import Routeinfo from '../../components/Routeinfo/Routeinfo'
+import Productslist from '../../components/Productslist/Productslist'
+import './Shopview.scss'
 
 class Shopview extends Component {
   state = {
@@ -39,22 +40,7 @@ class Shopview extends Component {
             </div>
           </div>
         </div>
-        <div className="products-list">
-          <div className="container">
-            <div className="products">
-              {products.map((prd, idx) => (
-                <div key={idx} className="product">
-                  <div className="prd-img-cont">
-                    <img src={prd.img} alt="product" className="prd-img" />
-                  </div>
-                  <h4 className="prd-name">{prd.name}</h4>
-                  <h4 className="prd-price">{prd.rate}</h4>
-                  <p className="prd-cat">{prd.category}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Productslist products={products} />
         <div className="sub-and-discover">
           <div className="sub">
             <h4 className="title">BOREAL NEWSLETTER</h4>

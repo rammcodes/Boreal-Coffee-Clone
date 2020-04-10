@@ -1,0 +1,64 @@
+.product-view {
+  padding: 120px 0;
+  .prd-and-details {
+    margin: 100px 0 0 0;
+    background-color: browns;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .prd {
+        padding: 0 50px;
+        .prd-img-cont {
+          .prd-img {
+            width: 100%;
+          }
+        }
+      }
+      .details {
+        .content {
+          padding: 50px 0 0 0;
+          .prd-name {
+            font-size: 2rem;
+          }
+          .prd-price {
+            margin: 5px 0 0 0;
+            font-size: 1.6rem;
+            color: #f78f1e;
+            .price-info {
+              font-size: 0.8rem;
+            }
+          }
+          .overview {
+            margin: 50px 0 0 0;
+            .title-and-info {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .title {
+                font-size: 1rem;
+              }
+              .info {
+                color: #f78f1e;
+                display: flex;
+                align-items: center;
+                .icon-cont {
+                  width: 30px;
+                  .icon {
+                    width: 100%;
+                  }
+                }
+                .txt {
+                    margin: 0 0 0 10px;
+                    font-size: 0.9rem;
+                    font-weight: lighter;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,6 @@ import Productview from './views/Productview/Productview'
 import Footer from './components/Footer/Footer'
 import './App.scss'
 
-
 class App extends React.Component {
   state = {
     topbarEffect: true,
@@ -29,9 +28,20 @@ class App extends React.Component {
           )}
         />
         <Route
+          exact
           path="/shop"
           render={(props) => (
             <Shopview {...props} topbarEffectToggle={this.topbarEffectToggle} />
+          )}
+        />
+        <Route
+          exact
+          path="/shop/product"
+          render={(props) => (
+            <Productview
+              {...props}
+              topbarEffectToggle={this.topbarEffectToggle}
+            />
           )}
         />
         <Footer />

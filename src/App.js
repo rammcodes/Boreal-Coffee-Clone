@@ -1,10 +1,12 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Topbar from './Components/Topbar/Topbar'
-import Homeview from './Views/Homeview/Homeview'
-import Shopview from './Views/Shopview/Shopview'
-import Footer from './Components/Footer/Footer'
+import Topbar from './components/Topbar/Topbar'
+import Homeview from './views/Homeview/Homeview'
+import Shopview from './views/Shopview/Shopview'
+import Productview from './views/Productview/Productview'
+import Footer from './components/Footer/Footer'
 import './App.scss'
+
 
 class App extends React.Component {
   state = {

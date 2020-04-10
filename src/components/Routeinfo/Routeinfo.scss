@@ -1,0 +1,36 @@
+.route-info {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    .route-list {
+      .route,
+      .arrow-right {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #8d8e8d;
+        text-transform: uppercase;
+      }
+      .arrow-right {
+        font-size: 1rem;
+      }
+      .active {
+        color: #f78f1e;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .route-info {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .route-info {
+    display: none;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import products from '../../data/products'
 import './Shopview.scss'
+import Routeinfo from '../../components/Routeinfo/Routeinfo'
 
 class Shopview extends Component {
   state = {
@@ -16,15 +17,7 @@ class Shopview extends Component {
     const { products } = this.state
     return (
       <div className="shopview">
-        <div className="route-info">
-          <div className="container">
-            <p className="route-list">
-              <span className="route">Home</span>
-              <span className="arrow-right">></span>
-              <span className="route active">Shop</span>
-            </p>
-          </div>
-        </div>
+        <Routeinfo />
         <div className="msg-and-sort">
           <div className="container">
             <div className="msg">

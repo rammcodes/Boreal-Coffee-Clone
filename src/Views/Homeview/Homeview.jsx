@@ -4,6 +4,7 @@ import './Homeview.scss'
 class Homeview extends React.Component {
   componentDidMount() {
     window.scroll(0,0)
+    this.props.topbarEffectToggle(true)
   }
 
   render() {

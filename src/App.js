@@ -7,12 +7,31 @@ import Footer from './Components/Footer/Footer'
 import './App.scss'
 
 class App extends React.Component {
+  state = {
+    topbarEffect: true,
+  }
+
+  topbarEffectToggle = (val) => {
+    this.setState({ topbarEffect: val })
+  }
+
   render() {
     return (
       <div className="app">
-        <Topbar/>
-        <Route exact path="/" render={(props) => <Homeview {...props} />} />
-        <Route path="/shop" render={(props) => <Shopview {...props} />} />
+        <Topbar topbarEffect={this.state.topbarEffect} />
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <Homeview {...props} topbarEffectToggle={this.topbarEffectToggle} />
+          )}
+        />
+        <Route
+          path="/shop"
+          render={(props) => (
+            <Shopview {...props} topbarEffectToggle={this.topbarEffectToggle} />
+          )}
+        />
         <Footer />
       </div>
     )

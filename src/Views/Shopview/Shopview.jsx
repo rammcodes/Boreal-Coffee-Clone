@@ -8,12 +8,13 @@ class Shopview extends Component {
   }
 
   componentDidMount() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
+    this.props.topbarEffectToggle(false)
   }
 
   render() {
     const { products } = this.state
-    return (  
+    return (
       <div className="shopview">
         <div className="route-info">
           <div className="container">
@@ -48,7 +49,7 @@ class Shopview extends Component {
         <div className="products-list">
           <div className="container">
             <div className="products">
-              {products.map((prd,idx) => (
+              {products.map((prd, idx) => (
                 <div key={idx} className="product">
                   <div className="prd-img-cont">
                     <img src={prd.img} alt="product" className="prd-img" />

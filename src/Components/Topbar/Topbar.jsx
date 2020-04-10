@@ -1,6 +1,6 @@
 import React from 'react'
 import './Topbar.scss'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class Topbar extends React.Component {
   state = {
@@ -24,21 +24,38 @@ class Topbar extends React.Component {
     this.shouldTopbarChange()
   }
 
+  onNavDropdownClick = (url) => {
+    this.props.history.push(url)
+  }
+
   render() {
     const { showResMenu, scrolled } = this.state
+    const { topbarEffect } = this.props
     return (
-      <nav className={`topbar ${scrolled ? 'topbarInv' : ''}`}>
+      <nav
+        className={`topbar ${
+          topbarEffect ? (scrolled ? 'topbarInv' : '') : 'topbarInv'
+        }`}
+      >
         <div className="container">
           <Link to="/" className="logo-container">
-            {scrolled ? (
-              <img
-                src={require('../../assets/img/black-logo.png')}
-                className="logo"
-                alt="logo"
-              />
+            {topbarEffect ? (
+              scrolled ? (
+                <img
+                  src={require('../../assets/img/black-logo.png')}
+                  className="logo"
+                  alt="logo"
+                />
+              ) : (
+                <img
+                  src={require('../../assets/img/logo.png')}
+                  className="logo"
+                  alt="logo"
+                />
+              )
             ) : (
               <img
-                src={require('../../assets/img/logo.png')}
+                src={require('../../assets/img/black-logo.png')}
                 className="logo"
                 alt="logo"
               />
@@ -63,7 +80,10 @@ class Topbar extends React.Component {
               </ul>
             </div>
 
-            <Link to="/shop" className="item-container">
+            <div
+              onClick={() => this.onNavDropdownClick("/shop")}
+              className="item-container"
+            >
               <li className="item">
                 <span className="txt">SHOP</span>
                 <img
@@ -83,7 +103,7 @@ class Topbar extends React.Component {
                   MERCHANDISE
                 </Link>
               </ul>
-            </Link>
+            </div>
             <div className="item-container item-lg">
               <li className="item">COFFEE CATERING</li>
             </div>
@@ -254,4 +274,4 @@ class Topbar extends React.Component {
   }
 }
 
-export default Topbar
+export default withRouter(Topbar)

@@ -112,21 +112,55 @@ class Topbar extends React.Component {
             </div>
             <div className="item-container">
               <li className="item">
-                <img
-                  src={require('../../assets/icons/bag.png')}
-                  alt="cart"
-                  className="cart"
-                />
+                {topbarEffect ? (
+                  scrolled ? (
+                    <img
+                      src="https://img.icons8.com/ios-filled/48/000000/shopping-bag.png"
+                      alt="shop-bag"
+                      className="cart"
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/icons/bag.png')}
+                      alt="cart"
+                      className="cart"
+                    />
+                  )
+                ) : (
+                  <img
+                    src="https://img.icons8.com/ios-filled/48/000000/shopping-bag.png"
+                    alt="shop-bag"
+                    className="cart"
+                  />
+                )}
+
                 <span className="txt">CART</span>
               </li>
             </div>
             <div className="item-container item-md">
               <li className="item">
-                <img
-                  src={require('../../assets/icons/user.png')}
-                  alt="user"
-                  className="user"
-                />
+                {topbarEffect ? (
+                  scrolled ? (
+                    <img
+                      src="https://img.icons8.com/material/48/000000/user.png"
+                      alt="user"
+                      className="user"
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/icons/user.png')}
+                      alt="user"
+                      className="user"
+                    />
+                  )
+                ) : (
+                  <img
+                    src="https://img.icons8.com/material/48/000000/user.png"
+                    alt="user"
+                    className="user"
+                  />
+                )}
+
                 <span className="txt">ACCOUNT</span>
                 <img
                   src={require('../../assets/icons/down.png')}

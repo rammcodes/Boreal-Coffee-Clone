@@ -81,7 +81,7 @@ class Topbar extends React.Component {
             </div>
 
             <div
-              onClick={() => this.onNavDropdownClick("/shop")}
+              onClick={() => this.onNavDropdownClick('/shop')}
               className="item-container"
             >
               <li className="item">
@@ -139,15 +139,23 @@ class Topbar extends React.Component {
           <div className="nav-items small">
             <div className="item-container">
               <li className="item">
-                {scrolled ? (
-                  <img
-                    src="https://img.icons8.com/ios-filled/48/000000/shopping-bag.png"
-                    alt="shop-bag"
-                    className="icon"
-                  />
+                {topbarEffect ? (
+                  scrolled ? (
+                    <img
+                      src="https://img.icons8.com/ios-filled/48/000000/shopping-bag.png"
+                      alt="shop-bag"
+                      className="icon"
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/icons/bag.png')}
+                      alt="shop-bag"
+                      className="icon"
+                    />
+                  )
                 ) : (
                   <img
-                    src={require('../../assets/icons/bag.png')}
+                    src="https://img.icons8.com/ios-filled/48/000000/shopping-bag.png"
                     alt="shop-bag"
                     className="icon"
                   />
@@ -156,16 +164,24 @@ class Topbar extends React.Component {
             </div>
             <div className="item-container">
               <li className="item">
-                {scrolled ? (
+                {topbarEffect ? (
+                  scrolled ? (
+                    <img
+                      src="https://img.icons8.com/material/48/000000/user.png"
+                      alt="user"
+                      className="icon"
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/icons/user.png')}
+                      alt="cart"
+                      className="icon"
+                    />
+                  )
+                ) : (
                   <img
                     src="https://img.icons8.com/material/48/000000/user.png"
                     alt="user"
-                    className="icon"
-                  />
-                ) : (
-                  <img
-                    src={require('../../assets/icons/user.png')}
-                    alt="cart"
                     className="icon"
                   />
                 )}
@@ -173,15 +189,23 @@ class Topbar extends React.Component {
             </div>
             <div onClick={this.resMenuClick} className="item-container">
               <li className="item">
-                {scrolled ? (
-                  <img
-                    src="https://img.icons8.com/ios-filled/48/000000/menu.png"
-                    alt="menu"
-                    className="icon"
-                  />
+                {topbarEffect ? (
+                  scrolled ? (
+                    <img
+                      src="https://img.icons8.com/ios-filled/48/000000/menu.png"
+                      alt="menu"
+                      className="icon"
+                    />
+                  ) : (
+                    <img
+                      src={require('../../assets/icons/menu.png')}
+                      alt="menu"
+                      className="icon"
+                    />
+                  )
                 ) : (
                   <img
-                    src={require('../../assets/icons/menu.png')}
+                    src="https://img.icons8.com/ios-filled/48/000000/menu.png"
                     alt="menu"
                     className="icon"
                   />

@@ -209,7 +209,30 @@
     .prd-and-details {
       .container {
         .details {
+          .prd-weight,
+          .prd-name,
+          .prd-price {
+            text-align: center;
+          }
+          .prd-name {
+            margin: 10px 0 0 0;
+            font-size: 1.5rem !important;
+          }
+          .prd-price {
+            font-size: 1.3rem !important;
+          }
           .content {
+            .overview {
+              .title-and-info {
+                flex-direction: column;
+                .info {
+                  margin: 10px 0 0 0;
+                }
+              }
+              .detail-cont {
+                margin: 15px 0 0 0;
+              }
+            }
             .qty-checkout {
               .text,
               .cart-add {
@@ -227,6 +250,7 @@
     }
 
     .msg {
+      margin: 0 0 30px 0;
       .hl {
         font-size: 0.8rem;
         margin: 0 auto 5px auto;

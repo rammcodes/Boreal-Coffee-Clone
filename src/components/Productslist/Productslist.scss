@@ -59,6 +59,7 @@
 @media (max-width: 500px) {
   .products-list {
     .container {
+      margin: 0 auto 30px auto;
       .products {
         grid-template-columns: repeat(1, 100%);
         .product {

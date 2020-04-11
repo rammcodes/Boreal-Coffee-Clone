@@ -2,7 +2,6 @@
   padding: 120px 0 0 0;
   .prd-and-details {
     margin: 50px 0 80px 0;
-    background-color: browns;
     .container {
       max-width: 1200px;
       margin: auto;
@@ -137,33 +136,106 @@
   }
 }
 
-@media (max-width: 700px) {
-  .msg {
-    .hl {
-      font-size: 0.8rem;
-      width: 90%;
-      margin: 0 auto 20px auto;
-      line-height: 20px;
+@media (max-width: 1100px) {
+  .product-view {
+    .prd-and-details {
+      .container {
+        grid-template-columns: 100%;
+        .details {
+          .content {
+            padding: 30px;
+          }
+        }
+      }
     }
-    .main {
-      font-size: 1.5rem;
-      width: 90%;
-      margin: auto;
-      line-height: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-view {
+    padding: 50px 0 0 0;
+    .prd-and-details {
+      margin: 40px 0 30px 0;
+      .container {
+        .prd {
+          padding: 0 50px;
+          .prd-img-cont {
+            text-align: center;
+            .prd-img {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .product-view {
+    .prd-and-details {
+      .container {
+        .details {
+          .content {
+            .qty-checkout {
+              .text,
+              .cart-add {
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .msg {
+      .hl {
+        font-size: 0.8rem;
+        width: 90%;
+        margin: 0 auto 20px auto;
+        line-height: 20px;
+      }
+      .main {
+        font-size: 1.5rem;
+        width: 90%;
+        margin: auto;
+        line-height: 35px;
+      }
     }
   }
 }
 
 @media (max-width: 500px) {
-  .msg {
-    .hl {
-      font-size: 0.8rem;
-      margin: 0 auto 5px auto;
-      line-height: 18px;
+  .product-view {
+    .prd-and-details {
+      .container {
+        .details {
+          .content {
+            .qty-checkout {
+              .text,
+              .cart-add {
+                font-size: 0.7rem;
+              }
+              .cart-add {
+                .icon {
+                  width: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    .main {
-      font-size: 1.4rem;
-      line-height: 30px;
+
+    .msg {
+      .hl {
+        font-size: 0.8rem;
+        margin: 0 auto 5px auto;
+        line-height: 18px;
+      }
+      .main {
+        font-size: 1.4rem;
+        line-height: 30px;
+      }
     }
   }
 }

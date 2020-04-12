@@ -1,10 +1,7 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
 import Topbar from './components/Topbar/Topbar'
-import Homeview from './views/Homeview/Homeview'
-import Shopview from './views/Shopview/Shopview'
-import Productview from './views/Productview/Productview'
 import Footer from './components/Footer/Footer'
+import Routes from './components/Routes/Routes'
 import './App.scss'
 
 class App extends React.Component {
@@ -20,30 +17,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Topbar topbarEffect={this.state.topbarEffect} />
-        <Route
-          exact
-          path="/"
-          render={(props) => (
-            <Homeview {...props} topbarEffectToggle={this.topbarEffectToggle} />
-          )}
-        />
-        <Route
-          exact
-          path="/shop"
-          render={(props) => (
-            <Shopview {...props} topbarEffectToggle={this.topbarEffectToggle} />
-          )}
-        />
-        <Route
-          exact
-          path="/shop/product"
-          render={(props) => (
-            <Productview
-              {...props}
-              topbarEffectToggle={this.topbarEffectToggle}
-            />
-          )}
-        />
+        <Routes topbarEffectToggle={this.topbarEffectToggle} />
         <Footer />
       </div>
     )

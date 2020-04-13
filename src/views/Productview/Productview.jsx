@@ -7,11 +7,16 @@ import './Productview.scss'
 class Productview extends Component {
   state = {
     products,
+    currProduct: null,
   }
 
   componentDidMount() {
     window.scroll(0, 0)
     this.props.topbarEffectToggle(false)
+    let product = products.find(
+      (prd) => prd.id.toString() === this.props.match.params.prdId.toString()
+    )
+    this.setState({ currProduct: product })
   }
 
   limitProducts = (products) => {
@@ -20,7 +25,12 @@ class Productview extends Component {
   }
 
   render() {
-    const { products } = this.state
+    const { products, currProduct } = this.state
+
+    if (!currProduct) {
+      return null
+    }
+
     return (
       <div className="product-view">
         <Routeinfo />
@@ -29,7 +39,7 @@ class Productview extends Component {
             <div className="prd">
               <div className="prd-img-cont">
                 <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/tarmesaLRbio.jpg"
+                  src={currProduct.showCaseImg}
                   alt="product"
                   className="prd-img"
                 />
@@ -38,9 +48,10 @@ class Productview extends Component {
             <div className="details">
               <div className="content">
                 <div className="prd-weight">WEIGHT: 350G</div>
-                <h2 className="prd-name">TARAMESA BIO, ETHIOPIA</h2>
+                <h2 className="prd-name">{currProduct.name}</h2>
                 <h3 className="prd-price">
-                  16.50 CHF <span className="price-info">INCL VAT</span>
+                  {currProduct.rate} CHF{' '}
+                  <span className="price-info">INCL VAT</span>
                 </h3>
                 <div className="overview">
                   <div className="title-and-info">
@@ -59,13 +70,13 @@ class Productview extends Component {
                   <div className="detail-cont">
                     <p className="detail">
                       We have been importing this Organic coffee direct from the
-                      cooperative Taramesa in the region of
-                      Sidama with our colleague from Roasters United for several
-                      years now. This coffee is very delicate, fruity with a
-                      fresh finish. It is very interesting also in light roast
-                      for V60, aeropress, etc. It is more on the blue fruits
-                      side than on the espresso roast. This coffee is organic
-                      certified by bio-inspecta.
+                      cooperative Taramesa in the region of Sidama with our
+                      colleague from Roasters United for several years now. This
+                      coffee is very delicate, fruity with a fresh finish. It is
+                      very interesting also in light roast for V60, aeropress,
+                      etc. It is more on the blue fruits side than on the
+                      espresso roast. This coffee is organic certified by
+                      bio-inspecta.
                     </p>
                   </div>
                 </div>

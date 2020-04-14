@@ -50,7 +50,7 @@ class Productview extends Component {
                 <div className="prd-weight">WEIGHT: 350G</div>
                 <h2 className="prd-name">{currProduct.name}</h2>
                 <h3 className="prd-price">
-                  {currProduct.rate} CHF{' '}
+                  {currProduct.rate}{' '}
                   <span className="price-info">INCL VAT</span>
                 </h3>
                 <div className="overview">
@@ -81,7 +81,8 @@ class Productview extends Component {
                   </div>
                 </div>
                 <div className="qty-checkout">
-                  <div className="text">QUANTITY:</div>
+                  <div className="text txt-big">QUANTITY:</div>
+                  <div className="text txt-sm">QTY:</div>
                   <div className="item-count">1</div>
                   <div className="inc-dec">
                     <div className="inc">

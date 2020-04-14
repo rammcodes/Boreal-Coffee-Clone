@@ -80,6 +80,9 @@
               font-weight: bold;
               font-size: 1rem;
             }
+            .txt-sm {
+              display: none;
+            }
             .item-count {
               font-size: 1.2rem;
             }
@@ -175,12 +178,30 @@
   .product-view {
     .prd-and-details {
       .container {
+        .prd {
+          padding: 0px;
+          .prd-img-cont {
+            .prd-img {
+              width: 90%;
+            }
+          }
+        }
         .details {
           .content {
             .qty-checkout {
               .text,
               .cart-add {
-                font-size: 0.9rem;
+                font-size: 0.8rem !important;
+                .icon {
+                  display: none;
+                }
+              }
+              .txt-big {
+                display: none;
+              }
+              .txt-sm {
+                display: flex;
+                font-size: 1rem !important;
               }
             }
           }

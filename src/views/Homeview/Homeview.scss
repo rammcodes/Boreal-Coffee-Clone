@@ -281,6 +281,7 @@
     .homeview-header {
       .container {
         .content {
+          top: 50%;
           width: 90%;
           .hero-content {
             .hero-design {
@@ -290,11 +291,14 @@
           .header-nav-guide {
             flex-direction: column;
             width: 100%;
+            margin: 50px auto 0 auto;
+            width: 90%;
             .nav-btn {
-              border-width: 1px;
+              border-width: 1.5px;
               margin-bottom: 100px;
-              margin: 0 0 0px 0;
+              margin: 0 0 15px 0;
               width: 100%;
+              
             }
           }
         }

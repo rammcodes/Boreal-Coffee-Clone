@@ -384,6 +384,19 @@
 
 @media (max-width: 500px) {
   .homeview {
+    .homeview-header {
+      .container {
+        .content {
+          .header-nav-guide {
+            .nav-btn {
+              .text {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
     .brew {
       min-height: 550px;
     }

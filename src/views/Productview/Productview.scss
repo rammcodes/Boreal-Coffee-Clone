@@ -27,7 +27,8 @@
         justify-content: center;
         .img {
           width: 90%;
-          object-fit: cover;
+          height: 90%;
+          object-fit: contain;
         }
       }
     }

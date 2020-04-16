@@ -47,7 +47,7 @@ class Productview extends Component {
               <div className="content">
                 <div className="img-cont">
                   <img
-                    src="http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/decafbio.jpg"
+                    src={currProduct.showCaseImg}
                     alt="product"
                     className="img"
                   />

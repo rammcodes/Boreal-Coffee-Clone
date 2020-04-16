@@ -62,7 +62,10 @@ class Topbar extends React.Component {
             )}
           </Link>
           <div className="nav-items large">
-            <div className="item-container item-lg">
+            <div
+              onClick={() => this.onNavDropdownClick('/brandstory')}
+              className="item-container item-lg"
+            >
               <li className="item">WHO WE ARE?</li>
             </div>
             <div className="item-container">

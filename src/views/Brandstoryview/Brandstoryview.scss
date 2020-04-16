@@ -1,0 +1,73 @@
+.brandstoryview {
+  .bsv-header {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../../assets/img/brand-story-header-bg.png);
+    background-size: cover;
+    height: 55vh;
+    background-position: center;
+    background-color: black;
+    .content {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .sub-title,
+      .title {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .sub-title {
+        color: #e67e22;
+        margin: 0 0 7px 0;
+        font-size: 1.2rem;
+      }
+      .title {
+        color: #fff;
+        font-size: 2.8rem;
+      }
+    }
+  }
+  .brand-hl {
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #f8f9fa;
+      padding: 80px 0;
+      .name,
+      .origin {
+        text-transform: uppercase;
+      }
+      .name {
+        color: #e67e22;
+        font-size: 1.1rem;
+        margin: 0 0 5px 0;
+      }
+      .origin {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+      }
+      .org-line {
+        margin: 0 0 15px 0;
+        width: 20px;
+        border: 3px solid #e67e22;
+      }
+      .brand-details {
+        width: 85%;
+        margin: auto;
+        .news-hl {
+          .news-credit {
+            margin: 0 0 15px 0;
+            color: rgb(98, 98, 98);
+          }
+          .news-shot-cont {
+            .news-shot {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

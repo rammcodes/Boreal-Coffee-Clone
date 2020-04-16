@@ -9,7 +9,7 @@ class Productview extends Component {
   state = {
     products,
     currProduct: null,
-    showCaseProduct: true,
+    showCaseProduct: false,
   }
 
   componentDidMount() {

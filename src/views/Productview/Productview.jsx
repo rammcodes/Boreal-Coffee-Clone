@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import OutsideClickHandler from 'react-outside-click-handler'
 import Routeinfo from '../../components/Routeinfo/Routeinfo'
 import Productslist from '../../components/Productslist/Productslist'
 import products from '../../data/products'
@@ -8,6 +9,7 @@ class Productview extends Component {
   state = {
     products,
     currProduct: null,
+    showCaseProduct: true,
   }
 
   componentDidMount() {
@@ -24,8 +26,12 @@ class Productview extends Component {
     return limitedProducts
   }
 
+  toggleProductShowcase = (val) => {
+    this.setState({ showCaseProduct: val })
+  }
+
   render() {
-    const { products, currProduct } = this.state
+    const { products, currProduct, showCaseProduct } = this.state
 
     if (!currProduct) {
       return null
@@ -33,11 +39,31 @@ class Productview extends Component {
 
     return (
       <div className="product-view">
+        {showCaseProduct ? (
+          <div className="prd-showcase">
+            <OutsideClickHandler
+              onOutsideClick={() => this.toggleProductShowcase(false)}
+            >
+              <div className="content">
+                <div className="img-cont">
+                  <img
+                    src="http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/decafbio.jpg"
+                    alt="product"
+                    className="img"
+                  />
+                </div>
+              </div>
+            </OutsideClickHandler>
+          </div>
+        ) : null}
         <Routeinfo />
         <div className="prd-and-details">
           <div className="container">
             <div className="prd">
-              <div className="prd-img-cont">
+              <div
+                onClick={() => this.toggleProductShowcase(true)}
+                className="prd-img-cont"
+              >
                 <img
                   src={currProduct.showCaseImg}
                   alt="product"

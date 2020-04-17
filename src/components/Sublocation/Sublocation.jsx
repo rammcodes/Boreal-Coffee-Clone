@@ -4,13 +4,13 @@ import './Sublocation.scss'
 class Sublocation extends Component {
   state = {}
   render() {
-    const { inverted } = this.props
+    const { inverted, data } = this.props
     return (
       <div className="sub-location">
         {inverted ? null : (
           <div className="img-cont">
             <img
-              src="http://www.borealcoffee.ch/images/thumbnails/800/532/promo/1/1-13_0911-1717_NatashaCarrion.jpg"
+              src={require(`../../assets/img/${data.img}`)}
               alt="location"
               className="img"
             />
@@ -19,15 +19,10 @@ class Sublocation extends Component {
 
         <div className="details">
           <div className="cont">
-            <h4 className="txt-sm">THE FLAGSHIP</h4>
-            <h2 className="txt-bg">RUE DU STAND</h2>
+            <h4 className="txt-sm">{data.title}</h4>
+            <h2 className="txt-bg">{data.name}</h2>
             <hr className="org-line" />
-            <p className="para">
-              The Boréal Coffee Rue du Stand is our first coffee shop and our
-              flagship. Our café is a mix of bold colours and smooth music so
-              you can relax with colleagues or friends while drinking one of our
-              many beverages and pastries on offer.
-            </p>
+            <p className="para">{data.detail}</p>
             <button className="nav">
               <span className="txt">DISCOVER RUE DU STAND</span>
               <img
@@ -42,7 +37,7 @@ class Sublocation extends Component {
         {inverted ? (
           <div className="img-cont">
             <img
-              src="http://www.borealcoffee.ch/images/thumbnails/800/532/promo/1/1-13_0911-1717_NatashaCarrion.jpg"
+              src={require(`../../assets/img/${data.img}`)}
               alt="location"
               className="img"
             />

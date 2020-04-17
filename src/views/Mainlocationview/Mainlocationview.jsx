@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import './Mainlocationview.scss'
 import Sublocation from '../../components/Sublocation/Sublocation'
+import locations from '../../data/locations'
+import './Mainlocationview.scss'
 
 class Mainlocationview extends Component {
-  state = {}
+  state = {
+    locations,
+  }
   render() {
     return (
       <div className="mainlocationview">
@@ -34,9 +37,15 @@ class Mainlocationview extends Component {
           </div>
         </header>
         <section className="sub-loc-colln">
-          <Sublocation />
-          <Sublocation inverted={true} />
-          <Sublocation />
+          {locations.map((locn) =>
+            locn.subLocns.map((subLocn, idx) => (
+              <Sublocation
+                key={idx}
+                inverted={idx % 2 === 0 ? false : true}
+                data={subLocn}
+              />
+            ))
+          )}
         </section>
       </div>
     )

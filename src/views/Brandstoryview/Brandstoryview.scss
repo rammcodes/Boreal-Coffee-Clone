@@ -71,3 +71,36 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .brandstoryview {
+    .bsv-header {
+      .content {
+        .sub-title {
+          font-size: 1rem;
+        }
+        .title {
+          font-size: 2rem;
+          line-height: 40px;
+        }
+      }
+    }
+    .brand-hl {
+      .container {
+        padding: 40px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .brandstoryview {
+    .bsv-header {
+      .content {
+        .title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

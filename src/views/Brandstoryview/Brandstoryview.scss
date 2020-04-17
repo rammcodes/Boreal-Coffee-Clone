@@ -35,27 +35,27 @@
       margin: auto;
       background: #f8f9fa;
       padding: 80px 0;
-      .name,
-      .origin {
-        text-transform: uppercase;
-      }
-      .name {
-        color: #e67e22;
-        font-size: 1.1rem;
-        margin: 0 0 5px 0;
-      }
-      .origin {
-        font-size: 2rem;
-        margin: 0 0 10px 0;
-      }
-      .org-line {
-        margin: 0 0 15px 0;
-        width: 20px;
-        border: 3px solid #e67e22;
-      }
       .brand-details {
         width: 85%;
         margin: auto;
+        .name,
+        .origin {
+          text-transform: uppercase;
+        }
+        .name {
+          color: #e67e22;
+          font-size: 1.1rem;
+          margin: 0 0 5px 0;
+        }
+        .origin {
+          font-size: 2rem;
+          margin: 0 0 10px 0;
+        }
+        .org-line {
+          margin: 0 0 15px 0;
+          width: 20px;
+          border: 3px solid #e67e22;
+        }
         .news-hl {
           .news-credit {
             margin: 0 0 15px 0;

@@ -88,6 +88,21 @@
     .brand-hl {
       .container {
         padding: 40px 0;
+        .brand-details {
+          width: 90%;
+          .name,
+          .origin {
+            text-align: center;
+          }
+          .org-line {
+            margin: 0 auto 15px auto;
+          }
+          .news-hl {
+            .news-credit {
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }

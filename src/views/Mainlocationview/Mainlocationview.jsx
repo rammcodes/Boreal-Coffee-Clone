@@ -7,6 +7,12 @@ class Mainlocationview extends Component {
   state = {
     locations,
   }
+
+  componentDidMount() {
+    window.scroll(0, 0)
+    this.props.topbarEffectToggle(true)
+  }
+  
   render() {
     return (
       <div className="mainlocationview">

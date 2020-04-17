@@ -4,7 +4,8 @@ import Homeview from '../../views/Homeview/Homeview'
 import Shopview from '../../views/Shopview/Shopview'
 import Productview from '../../views/Productview/Productview'
 import Brandstoryview from '../../views/Brandstoryview/Brandstoryview'
-import Mainlocationview from '../../views/Mainlocationview/Mainlocationview';
+import Mainlocationview from '../../views/Mainlocationview/Mainlocationview'
+import Sublocationview from '../../views/Sublocationview/Sublocationview';
 
 class Routes extends Component {
   state = {}
@@ -42,7 +43,7 @@ class Routes extends Component {
             />
           )}
         />
-         <Route
+        <Route
           exact
           path="/mainlocation"
           render={(props) => (
@@ -50,6 +51,13 @@ class Routes extends Component {
               {...props}
               topbarEffectToggle={topbarEffectToggle}
             />
+          )}
+        />
+        <Route
+          exact
+          path="/sublocation"
+          render={(props) => (
+            <Sublocationview {...props} topbarEffectToggle={topbarEffectToggle} />
           )}
         />
       </>

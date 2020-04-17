@@ -24,7 +24,7 @@ class Sublocation extends Component {
             <hr className="org-line" />
             <p className="para">{data.detail}</p>
             <button className="nav">
-              <span className="txt">DISCOVER RUE DU STAND</span>
+              <span className="txt">DISCOVER {data.name}</span>
               <img
                 src={require('../../assets/icons/right-arrow.png')}
                 alt="arrow"

@@ -1,0 +1,51 @@
+.mainlocationview {
+  .mlv-header {
+    min-height: 600px;
+    background: url('../../assets//img/Mainlocation-header-bg.jpg');
+    .container {
+      padding: 140px 0 0 0;
+      max-width: 750px;
+      margin: auto;
+      position: relative;
+      .map-cont {
+        width: 100%;
+        .map {
+          width: 100%;
+        }
+      }
+      .sub-txt {
+        text-align: center;
+        color: #f78f1e;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        margin: 10px 0 0 0;
+      }
+      .loc-opts {
+        padding: 15px 0 30px 0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 400px;
+        margin: auto;
+        .txt-bg {
+          font-size: 2.6rem;
+          padding: 0 0 5px 0;
+        }
+        .active {
+          border-bottom: 5px solid #f78f1e;
+        }
+      }
+      .hdr-bottom {
+        padding: 0 0 15px 0;
+        .img-cont {
+          max-width: 180px;
+          margin: auto;
+          .img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

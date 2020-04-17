@@ -1,0 +1,56 @@
+.sub-location {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  .img-cont {
+    height: 400px;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .details {
+    height: 400px;
+    .cont {
+      width: 60%;
+      margin: 80px 25% 50px 15%;
+      .txt-sm {
+        color: #f78f1e;
+        font-size: 0.9rem;
+        margin: 0 0 5px 0;
+      }
+      .txt-bg {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+      }
+      .org-line {
+        margin: 0 0 20px 0;
+        width: 20px;
+        border: 2px solid #e67e22;
+      }
+      .para {
+        color: rgb(54, 54, 54);
+        line-height: 25px;
+        font-weight: lighter;
+        font-size: 1rem;
+      }
+      .nav {
+        margin-top: 30px;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        .txt {
+          color: #000;
+          margin: 0 5px 0 0;
+        }
+        .icon {
+          width: 25px;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+}

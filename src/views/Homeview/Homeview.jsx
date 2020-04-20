@@ -1,9 +1,10 @@
 import React from 'react'
+import Twocolumns from '../../components/Twocolumns/Twocolumns'
 import './Homeview.scss'
 
 class Homeview extends React.Component {
   componentDidMount() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.props.topbarEffectToggle(true)
   }
 
@@ -15,7 +16,7 @@ class Homeview extends React.Component {
             <div className="content">
               <div className="hero-content">
                 <img
-                  src="http://www.borealcoffee.ch/design/themes/boreal/assets/dist/images/content/home-hero.png"
+                  src={require('../../assets/img/homeview-hdr-img.png')}
                   alt="hero"
                   className="hero-design"
                 />
@@ -50,85 +51,55 @@ class Homeview extends React.Component {
         </header>
         <section className="story">
           <div className="container">
-            <div className="shops">
-              <div className="shops-img-container">
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/532/promo_hover/1/block-home-1-hover.jpg"
-                  alt="boreal-coffee-shop"
-                  className="shop"
-                />
-              </div>
-              <div className="details">
-                <div className="content">
-                  <h4 className="highlight">THE STORY OF OUR</h4>
-                  <h2 className="title">COFFEE SHOPS</h2>
-                  <hr className="org-line" />
-                  <p className="text">
-                    From an abandoned storage space to a convivial meeting place
-                    in the heart of Geneva, our first café opened in April 2009
-                    at Rue du Stand 60.
-                  </p>
-                  <br />
-                  <p className="text">
-                    Now in 3 locations in Geneva and 2 locations in Zürich,
-                    customers can expect an amazing experience from bean to cup.
-                    Boreal Coffee is committed to sourcing the finest quality
-                    coffee beans from farmers around the world, directly traded,
-                    and roasted with love each week in our artisanal roastery in
-                    Carouge.
-                  </p>
-                  <br />
-                  <p className="text">
-                    Boréal Coffee expose photos of Léonard Fisch.
-                  </p>
-                  <button className="discover">
-                    <span className="txt">DISCOVER OUR CAFES</span>
-                    <img
-                      src={require('../../assets/icons/right-arrow.png')}
-                      alt="right"
-                      className="right"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="manufacturing">
-              <div className="manu-img-container">
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/532/promo_hover/1/home.jpg"
-                  alt="boreal-coffee-industry"
-                  className="shop"
-                />
-              </div>
-              <div className="details">
-                <div className="content">
-                  <h4 className="highlight">FROM BEAN TO CUP AT</h4>
-                  <h2 className="title">BOREAL'S ROASTERY</h2>
-                  <hr className="org-line" />
-                  <p className="text">
-                    We opened an artisanal roastery in Carouge where our small
-                    team of dedicated roasters works to match the profiles of
-                    the green coffee beans we import with a roast that brings
-                    out their best characteristics.
-                  </p>
-                  <br />
-                  <p className="text">
-                    And, knowing that we work directly with the farmers
-                    themselves wherever possible to ensure better livelihoods
-                    while caring for the environment, your beverage is one to
-                    feel good about.
-                  </p>
-                  <button className="discover">
-                    <span className="txt">LEARN ABOUT OUR ROASTERY</span>
-                    <img
-                      src={require('../../assets/icons/right-arrow.png')}
-                      alt="right"
-                      className="right"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
+            <Twocolumns
+              inverted={false}
+              mainHead={'COFFEE SHOPS'}
+              subHead={'THE STORY OF OUR'}
+              detail={[
+                `From an abandoned storage space to a convivial meeting place
+              in the heart of Geneva, our first café opened in April 2009
+              at Rue du Stand 60.`,
+                <br />,
+                <br />,
+                ` 
+              Now in 3 locations in Geneva and 2 locations in Zürich,
+              customers can expect an amazing experience from bean to cup.
+              Boreal Coffee is committed to sourcing the finest quality
+              coffee beans from farmers around the world, directly traded,
+              and roasted with love each week in our artisanal roastery in
+              Carouge.`,
+                <br />,
+                <br />,
+                ` 
+              Boréal Coffee expose photos of Léonard Fisch.`,
+              ]}
+              img={'block-home-1-min.jpg'}
+              hasBtn
+            />
+
+            <Twocolumns
+              inverted={true}
+              mainHead={"BOREAL'S ROASTERY"}
+              subHead={'FROM BEAN TO CUP AT'}
+              detail={[
+                `                  
+              We opened an artisanal roastery in Carouge where our small
+              team of dedicated roasters works to match the profiles of
+              the green coffee beans we import with a roast that brings
+              out their best characteristics.`,
+                <br />,
+                <br />,
+                ` 
+            
+              And, knowing that we work directly with the farmers
+              themselves wherever possible to ensure better livelihoods
+              while caring for the environment, your beverage is one to
+              feel good about.
+            `,
+              ]}
+              img={'block-home-2-min.jpg'}
+              hasBtn
+            />
           </div>
         </section>
         <section className="brew">

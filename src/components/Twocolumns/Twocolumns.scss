@@ -1,0 +1,138 @@
+.two-cols {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  .img-cont {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 0px;
+  }
+
+  .details {
+    background-color: #f8f9fa;
+    .cont {
+      width: 60%;
+      margin: 80px 25% 80px 15%;
+      .txt-sm {
+        color: #f78f1e;
+        font-size: 0.9rem;
+        margin: 0 0 5px 0;
+        text-transform: uppercase;
+      }
+      .txt-bg {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+      }
+      .org-line {
+        margin: 0 0 20px 0;
+        width: 20px;
+        border: 2px solid #e67e22;
+      }
+      .para {
+        color: rgb(54, 54, 54);
+        line-height: 25px;
+        font-weight: lighter;
+        font-size: 1.1rem;
+        line-height: 30px;
+      }
+      .nav {
+        margin-top: 30px;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        .txt {
+          color: #000;
+          margin: 0 5px 0 0;
+        }
+        .icon {
+          width: 25px;
+          margin-left: 7px;
+        }
+      }
+      .down {
+        margin: 40px 0 0 0;
+        text-transform: uppercase;
+        .upper {
+          display: flex;
+          align-items: center;
+          margin: 0 0 10px 0;
+        }
+        .plane {
+          color: #e67e22;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .two-cols {
+    .details {
+      .cont {
+        width: auto;
+        margin: 30px 10%;
+        .para {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .two-cols {
+    grid-template-columns: 100%;
+    .img-cont {
+      min-height: 500px;
+      order: 1;
+    }
+    .nav {
+      justify-content: center;
+    }
+    .details {
+      order: 2;
+      text-align: center;
+      .cont {
+        margin: 40px 5%;
+        .org-line {
+          margin: 0 auto 20px auto;
+        }
+        .para {
+          text-align: left;
+        }
+        .down {
+          .upper {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  @media (max-width: 900px) {
+    .two-cols {
+      .details {
+        .cont {
+          .txt-bg {
+            font-size: 1.8rem;
+          }
+          .para {
+            font-size: 0.9rem;
+            line-height: 25px;
+          }
+          .nav {
+            font-size: 0.8rem;
+          }
+          .down {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}

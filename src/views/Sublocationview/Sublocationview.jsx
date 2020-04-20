@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import Locationhighlight from '../../components/Locationhighlight/Locationhighlight'
 import './Sublocationview.scss'
+import Twocolumns from '../../components/Twocolumns/Twocolumns'
 
 class Sublocationview extends Component {
   state = {}
@@ -19,34 +21,14 @@ class Sublocationview extends Component {
             </p>
           </div>
         </header>
-        <div className="main">
-          <div className="img-cont">
-            <img
-              src="http://www.borealcoffee.ch/images/thumbnails/800/532/promo/1/1-13_0911-2119_NatashaCarrion.jpg"
-              alt="pic"
-              className="img"
-            />
-          </div>
-          <div className="details">
-            <div className="cont">
-              <h4 className="txt-sm">The flagship</h4>
-              <h2 className="txt-bg">Rue du Stand</h2>
-              <hr className="org-line" />
-              <p className="para">
-                The Boréal Coffee Rue du Stand is our first coffee shop and our
-                flagship. Our café is a mix of bold colours and smooth music so
-                you can relax with colleagues or friends while drinking one of
-                our may beverages on offer.
-              </p>
-              <div className="down">
-                <div className="upper">
-                  <h4 className="title">ADDRESS</h4>
-                </div>
-                <p className="plane">Rue du Stand 60 1204 Geneva</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Twocolumns 
+        inverted={false}
+        mainHead={"RUE DU STAND"}
+        subHead={"THE FLAGSHIP"}
+        img={"r-d-s-col.jpg"}
+        detail={"The Boréal Coffee Rue du Stand is our first coffee shop and our flagship. Our café is a mix of bold colours and smooth music so you can relax with colleagues or friends while drinking one of our may beverages on offer."}
+        hasBtn={false}
+        />
         <div className="brand-highlight">
           <div className="container">
             <div className="cont">
@@ -62,63 +44,9 @@ class Sublocationview extends Component {
             </div>
           </div>
         </div>
-        <div className="location-highlight">
-          <div className="container">
-            <div className="images">
-              <div className="img-cont">
-                <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch-8.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-              <div className="img-cont">
-              <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/500/500/detailed/1/13_0911-1714_NatashaCarrion.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-              <div className="img-cont">
-              <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch-58.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-              <div className="img-cont">
-              <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-              <div className="img-cont">
-              <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/13_0911-1937_NatashaCarrion.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-              <div className="img-cont">
-              <div className="shadow-layer"></div>
-                <img
-                  src="http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/13_0911-1962_NatashaCarrion.jpg"
-                  alt="location-img"
-                  className="img"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Locationhighlight />
       </div>
     )
   }
 }
-
 export default Sublocationview

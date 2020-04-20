@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Sublocation from '../../components/Sublocation/Sublocation'
 import locations from '../../data/locations'
+import Twocolumns from '../../components/Twocolumns/Twocolumns'
 import './Mainlocationview.scss'
 
 class Mainlocationview extends Component {
@@ -12,7 +12,7 @@ class Mainlocationview extends Component {
     window.scroll(0, 0)
     this.props.topbarEffectToggle(true)
   }
-  
+
   render() {
     return (
       <div className="mainlocationview">
@@ -45,10 +45,14 @@ class Mainlocationview extends Component {
         <section className="sub-loc-colln">
           {locations.map((locn) =>
             locn.subLocns.map((subLocn, idx) => (
-              <Sublocation
+              <Twocolumns
                 key={idx}
                 inverted={idx % 2 === 0 ? false : true}
-                data={subLocn}
+                mainHead={subLocn.name}
+                subHead={subLocn.title}
+                img={subLocn.img}
+                detail={subLocn.detail}
+                hasBtn
               />
             ))
           )}

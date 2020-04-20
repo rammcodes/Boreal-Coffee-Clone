@@ -35,60 +35,6 @@
       }
     }
   }
-  .main {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    .img-cont {
-      height: 450px;
-      .img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .details {
-      background-color: #f8f9fa;
-      height: 450px;
-      .cont {
-        width: 60%;
-        margin: 80px 25% 0px 15%;
-        .txt-sm {
-          color: #f78f1e;
-          font-size: 0.9rem;
-          margin: 0 0 5px 0;
-          text-transform: uppercase;
-        }
-        .txt-bg {
-          font-size: 2rem;
-          margin: 0 0 10px 0;
-        }
-        .org-line {
-          margin: 0 0 20px 0;
-          width: 20px;
-          border: 2px solid #e67e22;
-        }
-        .para {
-          color: rgb(54, 54, 54);
-          line-height: 25px;
-          font-weight: lighter;
-          font-size: 1rem;
-        }
-        .down {
-          margin: 40px 0 0 0;
-          text-transform: uppercase;
-          .upper {
-            display: flex;
-            align-items: center;
-            margin: 0 0 10px 0;
-          }
-          .plane {
-            color: #e67e22;
-          }
-        }
-      }
-    }
-  }
   .brand-highlight {
     .container {
       max-width: 800px;
@@ -118,38 +64,58 @@
       }
     }
   }
+}
 
-  .location-highlight {
-    .container {
-      .images {
-        display: grid;
-        grid-template-columns: repeat(3, 33.33%);
-        .img-cont {
-          position: relative;
-          height: 600px;
-          cursor: pointer;
-          transition: all .4s ease;
-          .img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .shadow-layer {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #e67e22;
-            opacity: 0.7;
-            transition: all .4s ease;
-          }
-          &:hover {
-            .shadow-layer {
-              display: block;
-            }
-          }
+@media (max-width: 700px) {
+  .sublocationview {
+    .slv-header {
+      .content {
+        width: 90%;
+        margin: auto;
+        .sub-title {
+          font-size: 0.9rem;
+        }
+        .title {
+          font-size: 2rem;
+        }
+        .plane {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .sublocationview {
+    .slv-header {
+      .content {
+        .sub-title {
+          font-size: 0.8rem;
+        }
+        .title {
+          font-size: 1.7rem;
+        }
+        .plane {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .sublocationview {
+    .slv-header {
+      .content {
+        .sub-title {
+          font-size: 0.7rem;
+        }
+        .title {
+          font-size: 1.5rem;
+        }
+        .plane {
+          font-size: 0.7rem;
         }
       }
     }

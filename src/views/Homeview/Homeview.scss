@@ -398,7 +398,19 @@
       }
     }
     .brew {
-      min-height: 550px;
+      min-height: 500px;
+      .content {
+        .short-title {
+          font-size: 0.9rem;
+        }
+        .title {
+          font-size: 1.8rem;
+        }
+        .text {
+          font-size: 0.9rem;
+          line-height: 25px;
+        }
+      }
     }
   }
 }

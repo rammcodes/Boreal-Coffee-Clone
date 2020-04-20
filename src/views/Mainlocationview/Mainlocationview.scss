@@ -49,3 +49,40 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .mainlocationview {
+    .mlv-header {
+      min-height: 500px;
+      .container {
+        padding: 100px 0 0 0;
+        .map-cont {
+          width: 90%;
+          margin: auto;
+        }
+        .sub-txt {
+          font-size: 0.9rem;
+        }
+        .loc-opts {
+          width: 300px;
+          .txt-bg {
+            font-size: 2rem;
+          }
+          .active {
+            border-bottom: 4px solid #f78f1e;
+          }
+        }
+        .hdr-bottom {
+          padding: 0 0 15px 0;
+          .img-cont {
+            max-width: 180px;
+            margin: auto;
+            .img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

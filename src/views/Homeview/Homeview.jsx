@@ -111,7 +111,7 @@ class Homeview extends React.Component {
             <div className="text">
               Can't make it to Boreal? Whether you are looking for a hearty mug
               of black coffee in the morning or an after-lunch espresso, learn
-              how to brew a perfect cup of coffee for your needs and tastes :
+              how to brew a perfect cup of coffee for your needs and tastes
             </div>
             <div className="img-and-buy">
               <div className="img-cont">

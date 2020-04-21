@@ -16,10 +16,16 @@ class Coffeecateringview extends Component {
   render() {
     return (
       <div className="cc-view">
-        <Shortheader />
+        <Shortheader 
+            subHead={"Boréal at your next event"}
+            mainHead={"Local and international Coffee-Caterings"}
+            text={"Providing excellence in coffee hospitality from trade shows to personal events"}
+            img={"cc-hdr.jpg"}
+        />
         <div className="content">
           <Twocolumns
             inverted={false}
+            noExtra={true}
             mainHead={'COFFEE SHOPS'}
             subHead={'THE STORY OF OUR'}
             detail={[
@@ -49,6 +55,7 @@ class Coffeecateringview extends Component {
           />
           <Twocolumns
             inverted
+            noExtra={true}
             mainHead={'COFFEE SHOPS'}
             subHead={'THE STORY OF OUR'}
             detail={[
@@ -69,6 +76,7 @@ class Coffeecateringview extends Component {
           />
           <Twocolumns
             inverted={false}
+            noExtra={true}
             mainHead={'COFFEE SHOPS'}
             subHead={'THE STORY OF OUR'}
             detail={[

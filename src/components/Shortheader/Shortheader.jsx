@@ -4,14 +4,18 @@ import './Shortheader.scss'
 class Shortheader extends Component {
   state = {}
   render() {
+    const { mainHead, subHead, text, img } = this.props
     return (
-      <header className="short-header">
+      <header
+        className="short-header"
+        style={{
+          background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${require(`../../assets/img/${img}`)})`,
+        }}
+      >
         <div className="content">
-          <h2 className="sub-title">Our very first shop and flagship</h2>
-          <h2 className="title">Boréal, Rue du Stand</h2>
-          <p className="plane">
-            Our café is a mix of bold colours and smooth music
-          </p>
+          <h2 className="sub-title">{subHead}</h2>
+          <h2 className="title">{mainHead}</h2>
+          <p className="plane">{text} </p>
         </div>
       </header>
     )

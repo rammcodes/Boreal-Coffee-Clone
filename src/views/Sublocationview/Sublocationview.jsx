@@ -3,7 +3,7 @@ import Locationhighlight from '../../components/Locationhighlight/Locationhighli
 import Twocolumns from '../../components/Twocolumns/Twocolumns'
 import Brandhighlight from '../../components/Brandhighlight/Brandhighlight'
 import './Sublocationview.scss'
-
+import Shortheader from '../../components/Shortheader/Shortheader'
 
 class Sublocationview extends Component {
   state = {}
@@ -14,15 +14,14 @@ class Sublocationview extends Component {
   render() {
     return (
       <div className="sublocationview">
-        <header className="slv-header">
-          <div className="content">
-            <h2 className="sub-title">Our very first shop and flagship</h2>
-            <h2 className="title">Boréal, Rue du Stand</h2>
-            <p className="plane">
-              Our café is a mix of bold colours and smooth music
-            </p>
-          </div>
-        </header>
+        <Shortheader
+          subHead={'Our very first shop and flagship'}
+          mainHead={'Boréal, Rue du Stand'}
+          text={
+            'Our café is a mix of bold colours and smooth music'
+          }
+          img={"r-d-s-hdr.jpg"}
+        />
         <Twocolumns
           inverted={false}
           mainHead={'RUE DU STAND'}

@@ -5,7 +5,15 @@ import { Link } from 'react-router-dom'
 class Twocolumns extends Component {
   state = {}
   render() {
-    const { img, subHead, mainHead, detail, hasBtn, inverted } = this.props
+    const {
+      img,
+      subHead,
+      mainHead,
+      detail,
+      hasBtn,
+      inverted,
+      noExtra,
+    } = this.props
     return (
       <div className="two-cols">
         {inverted ? null : (
@@ -28,7 +36,7 @@ class Twocolumns extends Component {
               ))} */}
               {detail}
             </p>
-            {hasBtn ? (
+            {noExtra === true ? null : hasBtn ? (
               <Link to="/sublocation" className="nav">
                 <span className="txt">DISCOVER {mainHead}</span>
                 <img

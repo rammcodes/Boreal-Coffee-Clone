@@ -1,0 +1,29 @@
+.brand-highlight {
+  .container {
+    max-width: 800px;
+    margin: auto;
+    .cont {
+      padding: 50px 0;
+      text-align: center;
+      text-transform: uppercase;
+      .logo-cont {
+        width: 50px;
+        margin: 0 auto 15px auto;
+        .logo {
+          width: 100%;
+        }
+      }
+      .txt-sm {
+        color: #f78f1e;
+        font-size: 0.9rem;
+        margin: 0 0 5px 0;
+        text-transform: uppercase;
+      }
+      .txt-bg {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+        font-weight: bold;
+      }
+    }
+  }
+}

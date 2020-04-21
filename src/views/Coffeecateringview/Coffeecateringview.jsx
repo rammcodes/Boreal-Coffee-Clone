@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import './Coffeecateringview.scss'
 import Shortheader from '../../components/Shortheader/Shortheader'
 import Twocolumns from '../../components/Twocolumns/Twocolumns'
-import Locationhighlight from '../../components/Locationhighlight/Locationhighlight';
+import Locationhighlight from '../../components/Locationhighlight/Locationhighlight'
+import Brandhighlight from '../../components/Brandhighlight/Brandhighlight'
+import './Coffeecateringview.scss'
 
 class Coffeecateringview extends Component {
   state = {}
@@ -61,7 +62,7 @@ class Coffeecateringview extends Component {
               <br />,
               `
               We set up our coffee machines in your environment. All the technical specifications regarding the coffee machines will be provided to you prior to the event.
-              `
+              `,
             ]}
             img={'coffee-machine.jpg'}
             hasBtn
@@ -81,12 +82,13 @@ class Coffeecateringview extends Component {
               <br />,
               `
               We set up our coffee machines in your environment. All the technical specifications regarding the coffee machines will be provided to you prior to the event.
-              `
+              `,
             ]}
             img={'coffee-beans.jpg'}
             hasBtn
           />
         </div>
+        <Brandhighlight />
         <Locationhighlight />
       </div>
     )

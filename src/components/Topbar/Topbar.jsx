@@ -110,7 +110,10 @@ class Topbar extends React.Component {
                 </Link>
               </ul>
             </div>
-            <div className="item-container item-lg">
+            <div
+              onClick={() => this.onNavDropdownClick('/cc')}
+              className="item-container item-lg"
+            >
               <li className="item">COFFEE CATERING</li>
             </div>
             <div className="item-container">

@@ -1,0 +1,70 @@
+.short-header {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('http://www.borealcoffee.ch/images/thumbnails/1600/936/page/1/13_0911-1695_NatashaCarrion_18.00.44.jpg ');
+  background-size: cover;
+  min-height: 600px;
+  background-position: center;
+  background-color: black;
+  .content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .sub-title,
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .sub-title {
+      color: #e67e22;
+      margin: 0 0 7px 0;
+      font-size: 1.2rem;
+    }
+    .title {
+      color: #fff;
+      font-size: 2.8rem;
+      margin: 0 0 10px 0;
+    }
+    .plane {
+      text-align: center;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .short-header {
+    .content {
+      width: 90%;
+      margin: auto;
+      .sub-title {
+        font-size: 0.9rem;
+      }
+      .title {
+        font-size: 2rem;
+      }
+      .plane {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .short-header {
+    .content {
+      .sub-title {
+        font-size: 0.8rem;
+      }
+      .title {
+        font-size: 1.7rem;
+      }
+      .plane {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

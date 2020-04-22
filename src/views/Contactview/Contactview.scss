@@ -1,0 +1,100 @@
+.contact-view {
+  .main-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .left-cont {
+      color: #fff;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../../assets//img/coffee-process.jpg');
+      .container {
+        width: 60%;
+        margin: 80px 25% 80px 15%;
+        .txt-sm {
+          color: #f78f1e;
+          font-size: 0.9rem;
+          margin: 0 0 5px 0;
+          text-transform: uppercase;
+        }
+        .txt-bg {
+          font-size: 2rem;
+          margin: 0 0 10px 0;
+        }
+        .org-line {
+          margin: 0 0 20px 0;
+          width: 20px;
+          border: 2px solid #e67e22;
+        }
+        .para {
+          line-height: 25px;
+          font-weight: lighter;
+          font-size: 1.1rem;
+          line-height: 30px;
+        }
+        .bold {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .right-cont {
+      background: #f8f9fa;
+      .container {
+        width: 60%;
+        margin: 80px 25% 80px 15%;
+        .txt-sm {
+          color: #f78f1e;
+          font-size: 0.9rem;
+          margin: 0 0 5px 0;
+          text-transform: uppercase;
+        }
+        .txt-bg {
+          font-size: 2rem;
+          margin: 0 0 10px 0;
+        }
+        .org-line {
+          margin: 0 0 20px 0;
+          width: 20px;
+          border: 2px solid #e67e22;
+        }
+        .form {
+          .form-cont {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 20px 0;
+            .form-field {
+              width: 100%;
+              label {
+                display: block;
+                margin: 0 0 8px 0;
+                color: rgb(71, 71, 71);
+                font-size: 0.9rem;
+              }
+              input,
+              textarea {
+                border: 1px solid rgb(199, 199, 199);
+                width: 100%;
+                padding: 10px;
+              }
+            }
+            .short-field {
+              width: 47%;
+            }
+            .submit {
+              width: 100%;
+              margin: 20px 0 0 0;
+              padding: 15px;
+              text-align: center;
+              box-shadow: none;
+              color: #fff;
+              background: #f78f1e;
+              font-size: 1rem;
+              border: none;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

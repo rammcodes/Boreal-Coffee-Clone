@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Contactview.scss'
 import Shortheader from '../../components/Shortheader/Shortheader'
+import Brandhighlight from '../../components/Brandhighlight/Brandhighlight'
 
 class Contactview extends Component {
   state = {}
@@ -88,6 +89,15 @@ class Contactview extends Component {
             </div>
           </div>
         </div>
+        <Brandhighlight />
+        <Shortheader
+          mainHead={'Boréal Coffee'}
+          subHead={'Get in touch with'}
+          text={
+            'Email us or find us on social media (or better yet, stop by and say hello!)'
+          }
+          img={'contact-hdr.jpg'}
+        />
       </div>
     )
   }

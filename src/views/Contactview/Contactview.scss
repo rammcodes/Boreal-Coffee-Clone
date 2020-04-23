@@ -18,6 +18,7 @@
         .txt-bg {
           font-size: 2rem;
           margin: 0 0 10px 0;
+          text-transform: uppercase;
         }
         .org-line {
           margin: 0 0 20px 0;
@@ -27,8 +28,14 @@
         .para {
           line-height: 25px;
           font-weight: lighter;
-          font-size: 1.1rem;
+          font-size: 1rem;
           line-height: 30px;
+          ul {
+            padding: 0 0 0 20px;
+            li {
+              list-style: disc;
+            }
+          }
         }
         .bold {
           font-weight: bold;
@@ -39,7 +46,6 @@
     .right-cont {
       background: #f8f9fa;
       .container {
-        width: 60%;
         margin: 80px 25% 80px 15%;
         .txt-sm {
           color: #f78f1e;
@@ -50,6 +56,7 @@
         .txt-bg {
           font-size: 2rem;
           margin: 0 0 10px 0;
+          text-transform: uppercase;
         }
         .org-line {
           margin: 0 0 20px 0;
@@ -92,6 +99,105 @@
               border: none;
               font-weight: bold;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-view {
+    .main-content {
+      .left-cont,
+      .right-cont {
+        .container {
+          width: auto;
+          margin: 30px 10%;
+          .para {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact-view {
+    .main-content {
+      grid-template-columns: 100%;
+      .left-cont {
+        .container {
+          margin: 40px 5%;
+          text-align: center;
+          .org-line {
+            margin: 0 auto 20px auto;
+          }
+          .para {
+            text-align: left;
+          }
+        }
+      }
+      .right-cont {
+        order: -1;
+        .container {
+          text-align: center;
+          .org-line {
+            margin: 0 auto 20px auto;
+          }
+          .form {
+            .form-cont {
+              .form-field {
+                label {
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-view {
+    .main-content {
+      .right-cont {
+        .container {
+          .form {
+            .form-cont {
+              display: block;
+              .form-field {
+                label {
+                  font-size: 0.8rem;
+                }
+              }
+              .short-field {
+                width: 100%;
+                margin: 0 0 20px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-view {
+    .main-content {
+      .left-cont {
+        .container {
+          .txt-bg {
+            font-size: 1.8rem;
+          }
+          .para {
+            font-size: 0.9rem;
+            line-height: 25px;
+            font-weight: normal;
           }
         }
       }

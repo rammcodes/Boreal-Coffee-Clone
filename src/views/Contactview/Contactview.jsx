@@ -5,6 +5,12 @@ import Brandhighlight from '../../components/Brandhighlight/Brandhighlight'
 
 class Contactview extends Component {
   state = {}
+
+  componentDidMount() {
+    window.scroll(0, 0)
+    this.props.topbarEffectToggle(true)
+  }
+
   render() {
     return (
       <div className="contact-view">
@@ -19,8 +25,8 @@ class Contactview extends Component {
         <div className="main-content">
           <div className="left-cont">
             <div className="container">
-              <h4 className="txt-sm">Boréal Coffee</h4>
-              <h2 className="txt-bg">Contact form</h2>
+              <h4 className="txt-sm">Developing talent at Boréal</h4>
+              <h2 className="txt-bg">Work With Us !</h2>
               <hr className="org-line" />
               <p className="para">
                 Are you passionate about coffee? Do you enjoy working in a
@@ -52,8 +58,8 @@ class Contactview extends Component {
           </div>
           <div className="right-cont">
             <div className="container">
-              <h4 className="txt-sm">Developing talent at Boréal</h4>
-              <h2 className="txt-bg">Work With Us !</h2>
+              <h4 className="txt-sm">Boréal Coffee</h4>
+              <h2 className="txt-bg">Contact form</h2>
               <hr className="org-line" />
               <form className="form">
                 <div className="form-cont">
@@ -91,12 +97,14 @@ class Contactview extends Component {
         </div>
         <Brandhighlight />
         <Shortheader
-          mainHead={'Boréal Coffee'}
-          subHead={'Get in touch with'}
+          mainHead={'A perfect coffee cup always awaits for you'}
+          subHead={
+            'No matter if you are in beautiful Geneva or in stunning Zurich'
+          }
           text={
             'Email us or find us on social media (or better yet, stop by and say hello!)'
           }
-          img={'contact-hdr.jpg'}
+          img={'kitchen.jpg'}
         />
       </div>
     )

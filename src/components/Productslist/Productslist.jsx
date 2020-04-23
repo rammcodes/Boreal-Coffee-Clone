@@ -17,7 +17,7 @@ class Productslist extends Component {
                 className="product"
               >
                 <div className="prd-img-cont">
-                  <img src={prd.img} alt="product" className="prd-img" />
+                  <img src={require(`../../assets/img/ProductImages/${prd.img}`)} alt="product" className="prd-img" />
                 </div>
                 <h4 className="prd-name">{prd.name}</h4>
                 <h4 className="prd-price">{prd.rate}</h4>

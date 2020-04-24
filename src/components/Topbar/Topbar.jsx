@@ -26,6 +26,7 @@ class Topbar extends React.Component {
 
   onNavDropdownClick = (url) => {
     this.props.history.push(url)
+    this.setState({ showResMenu: false })
   }
 
   render() {
@@ -263,20 +264,28 @@ class Topbar extends React.Component {
         {showResMenu ? (
           <div className="res-menu">
             <div className="res-menu-container">
-              <div className="ele">
-                <Link to="#" className="main-link">
-                  WHO WE ARE?
-                </Link>
+              <div
+                onClick={() => this.onNavDropdownClick('/brandstory')}
+                className="ele"
+              >
+                <Link className="main-link">WHO WE ARE?</Link>
               </div>
-              <div className="ele">
-                <Link to="#" className="main-link">
+              <div
+                onClick={() => this.onNavDropdownClick('/mainlocation')}
+                className="ele"
+              >
+                <Link to="#" className="main-link sub-main-link">
                   CAFES
                 </Link>
                 <div className="sub">
-                  <Link to="#" className="sub-name">
+                  <Link
+                    // onClick={() => this.onNavDropdownClick('/cc')}
+                    to="#"
+                    className="sub-name"
+                  >
                     GENEVA
                   </Link>
-                  <Link to="#" className="sub-link">
+                  {/* <Link to="#" className="sub-link">
                     Rue du Stand
                   </Link>
                   <Link to="#" className="sub-link">
@@ -284,51 +293,76 @@ class Topbar extends React.Component {
                   </Link>
                   <Link to="#" className="sub-link">
                     Eaux-Vives
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="sub">
-                  <Link to="#" className="sub-name">
+                  <Link
+                    // onClick={() => this.onNavDropdownClick('/mainlocation')}
+                    to="#"
+                    className="sub-name"
+                  >
                     Zurich
                   </Link>
-                  <Link to="#" className="sub-link">
+                  {/* <Link to="#" className="sub-link">
                     Talacker
                   </Link>
                   <Link to="#" className="sub-link">
                     Oerlikon
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
-              <div className="ele">
-                <Link to="#" className="main-link">
+              <div
+                onClick={() => this.onNavDropdownClick('/shop')}
+                className="ele"
+              >
+                <Link to="#" className="main-link sub-main-link">
                   SHOP
                 </Link>
                 <div className="sub">
-                  <Link to="#" className="sub-link">
+                  <Link
+                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    to="#"
+                    className="sub-link"
+                  >
                     Filter
                   </Link>
-                  <Link to="#" className="sub-link">
+                  <Link
+                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    to="#"
+                    className="sub-link"
+                  >
                     Espresso
                   </Link>
-                  <Link to="#" className="sub-link">
+                  <Link
+                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    to="#"
+                    className="sub-link"
+                  >
                     Merchandise
                   </Link>
                 </div>
               </div>
-              <div className="ele">
+              <div
+                onClick={() => this.onNavDropdownClick('/cc')}
+                className="ele"
+              >
                 <Link to="#" className="main-link">
                   COFFEE CATERING
                 </Link>
               </div>
-              <div className="ele">
+              <div
+                onClick={() => this.onNavDropdownClick('/contact')}
+                className="ele"
+              >
                 <Link to="#" className="main-link">
                   CONTACT
                 </Link>
               </div>
-              <div className="ele">
+              {/* <div className="ele">
                 <Link to="#" className="main-link">
                   TERMS & CONDITIONS
                 </Link>
-              </div>
+              </div> */}
               <div onClick={this.resMenuClick} className="close">
                 <img
                   src={require('../../assets/icons/close.png')}

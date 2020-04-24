@@ -6,7 +6,7 @@ const products = [
     category: 'espresso',
     rate: '15.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/houseblendbio.jpg',
+      'houseblendbio-bg.jpg',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const products = [
     category: 'espresso',
     rate: '15.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/mammamiabio.jpg',
+      'mmbio-bg.jpg',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
     category: 'espresso',
     rate: '15.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/decafbio.jpg',
+      'decafbio-bg.jpg',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const products = [
     category: 'filter',
     rate: '16.50 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/1212/detailed/1/tarmesaLRbio.jpg',
+      'tarmesa-bg.jpg',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const products = [
     category: 'merchandise',
     rate: '19.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/731/detailed/1/packshot.jpg',
+      'mug-bg.jpg',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const products = [
     category: 'merchandise',
     rate: '54.90 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/788/detailed/1/61Hz8Kgh4rL._SL1232_.jpg',
+      'coffeeset-bg.jpg',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const products = [
     category: 'merchandise',
     rate: '69.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/630/detailed/1/harioKettle.jpg',
+      'hariokettle-bg.jpg',
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const products = [
     category: 'merchandise',
     rate: '20.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/900/detailed/1/template_s5kr-3u_ctg2-5v.jpg',
+      'giftcard-bg.jpg',
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const products = [
     category: 'merchandise',
     rate: '50.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/900/detailed/1/template_s5kr-3u_ctg2-5v.jpg',
+      'giftcard-bg.jpg',
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const products = [
     category: 'merchandise',
     rate: '100.00 CHF',
     showCaseImg:
-      'http://www.borealcoffee.ch/images/thumbnails/900/900/detailed/1/template_s5kr-3u_ctg2-5v.jpg',
+      'giftcard-bg.jpg',
   },
 ]
 

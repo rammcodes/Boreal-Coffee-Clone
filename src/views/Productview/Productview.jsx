@@ -47,7 +47,7 @@ class Productview extends Component {
               <div className="content">
                 <div className="img-cont">
                   <img
-                    src={currProduct.showCaseImg}
+                    src={require(`../../assets/img/ProductImages/${currProduct.showCaseImg}`)}
                     alt="product"
                     className="img"
                   />
@@ -65,7 +65,7 @@ class Productview extends Component {
                 className="prd-img-cont"
               >
                 <img
-                  src={currProduct.showCaseImg}
+                  src={require(`../../assets/img/ProductImages/${currProduct.showCaseImg}`)}
                   alt="product"
                   className="prd-img"
                 />

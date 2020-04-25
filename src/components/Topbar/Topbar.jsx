@@ -25,8 +25,8 @@ class Topbar extends React.Component {
   }
 
   onNavDropdownClick = (url) => {
-    this.props.history.push(url)
     this.setState({ showResMenu: false })
+    this.props.history.push(url)
   }
 
   render() {
@@ -277,15 +277,15 @@ class Topbar extends React.Component {
                 <Link to="#" className="main-link sub-main-link">
                   CAFES
                 </Link>
-                <div className="sub">
+                {/* <div className="sub">
                   <Link
-                    // onClick={() => this.onNavDropdownClick('/cc')}
+                    onClick={() => this.onNavDropdownClick('/cc')}
                     to="#"
                     className="sub-name"
                   >
                     GENEVA
                   </Link>
-                  {/* <Link to="#" className="sub-link">
+                   <Link to="#" className="sub-link">
                     Rue du Stand
                   </Link>
                   <Link to="#" className="sub-link">
@@ -293,23 +293,23 @@ class Topbar extends React.Component {
                   </Link>
                   <Link to="#" className="sub-link">
                     Eaux-Vives
-                  </Link> */}
-                </div>
-                <div className="sub">
+                  </Link> 
+                </div> */}
+                {/* <div className="sub">
                   <Link
-                    // onClick={() => this.onNavDropdownClick('/mainlocation')}
+                    onClick={() => this.onNavDropdownClick('/mainlocation')}
                     to="#"
                     className="sub-name"
                   >
                     Zurich
                   </Link>
-                  {/* <Link to="#" className="sub-link">
+                  <Link to="#" className="sub-link">
                     Talacker
                   </Link>
                   <Link to="#" className="sub-link">
                     Oerlikon
-                  </Link> */}
-                </div>
+                  </Link> 
+                </div> */}
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/shop')}
@@ -318,29 +318,29 @@ class Topbar extends React.Component {
                 <Link to="#" className="main-link sub-main-link">
                   SHOP
                 </Link>
-                <div className="sub">
+                {/* <div className="sub">
                   <Link
-                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    onClick={() => this.onNavDropdownClick('/shop')}
                     to="#"
                     className="sub-link"
                   >
                     Filter
                   </Link>
                   <Link
-                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    onClick={() => this.onNavDropdownClick('/shop')}
                     to="#"
                     className="sub-link"
                   >
                     Espresso
                   </Link>
                   <Link
-                    //onClick={() => this.onNavDropdownClick('/shop')}
+                    onClick={() => this.onNavDropdownClick('/shop')}
                     to="#"
                     className="sub-link"
                   >
                     Merchandise
                   </Link>
-                </div>
+                </div> */}
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/cc')}

@@ -168,21 +168,22 @@
       height: 100%;
       color: #fff;
       .res-menu-container {
-        padding: 10px 0 100px 0;
-        width: 90%;
+        padding: 0px 0 100px 0;
+        width: 100%;
         margin: auto;
         overflow: auto;
         height: 100%;
         .ele {
-          border-bottom: 1.5px solid white;
-          padding: 20px 0;
+          border-bottom: 1px solid rgb(139, 139, 139);
+          padding: 30px 20px;
+          transition: 0.5s;
           .main-link {
             width: 100%;
             font-size: 1.5rem;
             display: block;
           }
           .sub-main-link {
-            margin: 0 0 10px 0;
+            margin: 0 0 0px 0;
           }
 
           .sub {
@@ -206,11 +207,14 @@
               color: #f78f1e;
             }
           }
+          &:hover {
+            background-color: #f78f1e;
+          }
         }
         .close {
           background-color: #f78f1e;
           position: fixed;
-          transform: translate(0,-100%);
+          transform: translate(0, -100%);
           width: 100%;
           top: 100%;
           left: 0;

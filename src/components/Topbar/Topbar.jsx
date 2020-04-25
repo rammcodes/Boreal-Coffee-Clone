@@ -27,6 +27,7 @@ class Topbar extends React.Component {
   onNavDropdownClick = (url) => {
     this.setState({ showResMenu: false })
     this.props.history.push(url)
+    
   }
 
   render() {
@@ -268,7 +269,7 @@ class Topbar extends React.Component {
                 onClick={() => this.onNavDropdownClick('/brandstory')}
                 className="ele"
               >
-                <Link className="main-link">WHO WE ARE?</Link>
+                <Link to='#' className="main-link">WHO WE ARE?</Link>
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/mainlocation')}

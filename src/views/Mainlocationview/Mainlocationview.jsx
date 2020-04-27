@@ -5,15 +5,30 @@ import './Mainlocationview.scss'
 
 class Mainlocationview extends Component {
   state = {
-    locations,
+    location: null,
   }
 
   componentDidMount() {
+    const { mlid } = this.props.match.params
     window.scroll(0, 0)
     this.props.topbarEffectToggle(true)
+    let selectedLoc = locations.find(
+      (l, i) => l.id.toString() === mlid.toString()
+    )
+    this.setState({ location: selectedLoc })
+  }
+
+  componentWillUnmount() {
+    this.setState({ location: null })
   }
 
   render() {
+    const { location } = this.state
+
+    if (!location) {
+      return null
+    }
+
     return (
       <div className="mainlocationview">
         <header className="mlv-header">
@@ -43,19 +58,17 @@ class Mainlocationview extends Component {
           </div>
         </header>
         <section className="sub-loc-colln">
-          {locations.map((locn) =>
-            locn.subLocns.map((subLocn, idx) => (
-              <Twocolumns
-                key={idx}
-                inverted={idx % 2 === 0 ? false : true}
-                mainHead={subLocn.name}
-                subHead={subLocn.title}
-                img={subLocn.img}
-                detail={subLocn.detail}
-                hasBtn
-              />
-            ))
-          )}
+          {location.subLocns.map((subLocn, idx) => (
+            <Twocolumns
+              key={idx}
+              inverted={idx % 2 === 0 ? false : true}
+              mainHead={subLocn.name}
+              subHead={subLocn.title}
+              img={subLocn.img}
+              detail={subLocn.detail}
+              hasBtn
+            />
+          ))}
         </section>
       </div>
     )

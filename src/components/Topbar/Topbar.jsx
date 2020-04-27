@@ -71,7 +71,7 @@ class Topbar extends React.Component {
               <li className="item">WHO WE ARE?</li>
             </div>
             <div
-              onClick={() => this.onNavDropdownClick('/mainlocation')}
+              onClick={() => this.onNavDropdownClick('/mainlocation/1')}
               className="item-container"
             >
               <li className="item">
@@ -272,7 +272,7 @@ class Topbar extends React.Component {
                 <Link to='#' className="main-link">WHO WE ARE?</Link>
               </div>
               <div
-                onClick={() => this.onNavDropdownClick('/mainlocation')}
+                onClick={() => this.onNavDropdownClick('/mainlocation/1')}
                 className="ele"
               >
                 <Link to="#" className="main-link sub-main-link">

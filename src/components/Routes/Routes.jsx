@@ -47,7 +47,7 @@ class Routes extends Component {
         />
         <Route
           exact
-          path="/mainlocation"
+          path="/mainlocation/:mlid"
           render={(props) => (
             <Mainlocationview
               {...props}

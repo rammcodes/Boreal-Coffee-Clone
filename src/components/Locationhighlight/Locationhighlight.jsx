@@ -6,12 +6,12 @@ class Locationhighlight extends Component {
   state = {
     selectedImage: null,
     images: [
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/13_0911-1714_NatashaCarrion.jpg',
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch-8.jpg',
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch-58.jpg',
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/Boreal_BlackMovie_Leo-Fisch.jpg',
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/13_0911-1937_NatashaCarrion.jpg',
-      'http://www.borealcoffee.ch/images/thumbnails/800/800/detailed/1/13_0911-1962_NatashaCarrion.jpg',
+      'rds-1.jpg',
+      'rds-2.jpg',
+      'rds-3.jpg',
+      'rds-4.jpg',
+      'rds-5.jpg',
+      'rds-6.jpg',
     ],
   }
 
@@ -60,7 +60,7 @@ class Locationhighlight extends Component {
             <div className="img-showcase">
               <OutsideClickHandler onOutsideClick={this.closeImageShowcase}>
                 <div onClick={this.onNextImgClick} className="img-cont">
-                  <img src={selectedImage.url} alt="view" className="img" />
+                  <img src={require(`../../assets/img/SublocationImages/${selectedImage.url}`)} alt="view" className="img" />
                 </div>
               </OutsideClickHandler>
             </div>
@@ -73,7 +73,7 @@ class Locationhighlight extends Component {
                 onClick={() => this.onImageSelect(idx)}
               >
                 <div className="shadow-layer"></div>
-                <img src={img} alt="location-img" className="img" />
+                <img src={require(`../../assets/img/SublocationImages/${img}`)} alt="location-img" className="img" />
               </div>
             ))}
           </div>

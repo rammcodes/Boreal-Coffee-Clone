@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Twocolumns from '../../components/Twocolumns/Twocolumns'
 import './Homeview.scss'
 
@@ -22,22 +23,22 @@ class Homeview extends React.Component {
                 />
               </div>
               <div className="header-nav-guide">
-                <span className="nav-btn">
+                <Link to="/shop" className="nav-btn">
                   <span className="text">DISCOVER BOREAL</span>
                   <img
                     src={require('../../assets/icons/right-arrow.png')}
                     alt="right-arrow"
                     className="rt-arrow"
                   />
-                </span>
-                <span className="nav-btn">
+                </Link>
+                <Link to="/shop" className="nav-btn">
                   <span className="text">VISIT OUR WEBSHOP</span>
                   <img
                     src={require('../../assets/icons/right-arrow.png')}
                     alt="right-arrow"
                     className="rt-arrow"
                   />
-                </span>
+                </Link>
               </div>
             </div>
             <div className="scroll-container">
@@ -86,7 +87,8 @@ class Homeview extends React.Component {
               We opened an artisanal roastery in Carouge where our small
               team of dedicated roasters works to match the profiles of
               the green coffee beans we import with a roast that brings
-              out their best characteristics.`,
+              out their best characterisimport { Link } from 'react-router-dom';
+tics.`,
                 <br />,
                 <br />,
                 ` 

@@ -64,9 +64,10 @@ class Mainlocationview extends Component {
               inverted={idx % 2 === 0 ? false : true}
               mainHead={subLocn.name}
               subHead={subLocn.title}
-              img={subLocn.img}
+              img={subLocn.colImg}
               detail={subLocn.detail}
               hasBtn
+              navlink={`/mainlocation/${location.id}/sublocation/${subLocn.id}`}
             />
           ))}
         </section>
@@ -75,4 +76,4 @@ class Mainlocationview extends Component {
   }
 }
 
-export default Mainlocationview
+export default Mainlocationview;

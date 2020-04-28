@@ -13,6 +13,7 @@ class Twocolumns extends Component {
       hasBtn,
       inverted,
       noExtra,
+      navlink
     } = this.props
     return (
       <div className="two-cols">
@@ -37,7 +38,10 @@ class Twocolumns extends Component {
               {detail}
             </p>
             {noExtra === true ? null : hasBtn ? (
-              <Link to="/sublocation" className="nav">
+              <Link
+                to={navlink}
+                className="nav"
+              >
                 <span className="txt">DISCOVER {mainHead}</span>
                 <img
                   src={require('../../assets/icons/right-arrow.png')}

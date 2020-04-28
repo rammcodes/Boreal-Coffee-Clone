@@ -76,6 +76,7 @@ class Homeview extends React.Component {
               ]}
               img={'block-home-1-min.jpg'}
               hasBtn
+              navlink={`/mainlocation/1`}
             />
 
             <Twocolumns
@@ -87,8 +88,7 @@ class Homeview extends React.Component {
               We opened an artisanal roastery in Carouge where our small
               team of dedicated roasters works to match the profiles of
               the green coffee beans we import with a roast that brings
-              out their best characterisimport { Link } from 'react-router-dom';
-tics.`,
+              out their best characteristics.`,
                 <br />,
                 <br />,
                 ` 
@@ -101,6 +101,7 @@ tics.`,
               ]}
               img={'block-home-2-min.jpg'}
               hasBtn
+              navlink={`/mainlocation/1`}
             />
           </div>
         </section>

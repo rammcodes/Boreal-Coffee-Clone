@@ -57,7 +57,7 @@ class Routes extends Component {
         />
         <Route
           exact
-          path="/sublocation"
+          path="/mainlocation/:mlid/sublocation/:slid"
           render={(props) => (
             <Sublocationview
               {...props}

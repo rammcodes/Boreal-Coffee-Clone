@@ -1,9 +1,11 @@
 .short-header {
   position: relative;
-  background-size: cover;
+  background-size: cover !important;
   min-height: 600px;
-  background-position: center;
+  background-position: center !important;
   background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
   .content {
     position: absolute;
     width: 100%;

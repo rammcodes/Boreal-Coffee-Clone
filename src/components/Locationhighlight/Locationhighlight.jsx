@@ -60,7 +60,7 @@ class Locationhighlight extends Component {
             <div className="img-showcase">
               <OutsideClickHandler onOutsideClick={this.closeImageShowcase}>
                 <div onClick={this.onNextImgClick} className="img-cont">
-                  <img src={require(`../../assets/img/SublocationImages/${selectedImage.url}`)} alt="view" className="img" />
+                  <img src={require(`../../assets/img/${selectedImage.url}`)} alt="view" className="img" />
                 </div>
               </OutsideClickHandler>
             </div>
@@ -73,7 +73,7 @@ class Locationhighlight extends Component {
                 onClick={() => this.onImageSelect(idx)}
               >
                 <div className="shadow-layer"></div>
-                <img src={require(`../../assets/img/SublocationImages/${img}`)} alt="location-img" className="img" />
+                <img src={require(`../../assets/img/${img}`)} alt="location-img" className="img" />
               </div>
             ))}
           </div>

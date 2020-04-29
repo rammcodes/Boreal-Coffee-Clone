@@ -108,6 +108,7 @@ class Contactview extends Component {
             'Email us or find us on social media (or better yet, stop by and say hello!)'
           }
           img={'kitchen.jpg'}
+          smallMainHead
         />
       </div>
     )

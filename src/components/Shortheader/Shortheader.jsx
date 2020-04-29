@@ -4,7 +4,7 @@ import './Shortheader.scss'
 class Shortheader extends Component {
   state = {}
   render() {
-    const { mainHead, subHead, text, img } = this.props
+    const { mainHead, subHead, text, img, smallMainHead } = this.props
     return (
       <header
         className="short-header"
@@ -14,7 +14,7 @@ class Shortheader extends Component {
       >
         <div className="content">
           <h2 className="sub-title">{subHead}</h2>
-          <h2 className="title">{mainHead}</h2>
+          <h2 className={`title ${smallMainHead ? 'small-title' : ""}`}>{mainHead}</h2>
           <p className="plane">{text} </p>
         </div>
       </header>

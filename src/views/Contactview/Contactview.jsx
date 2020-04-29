@@ -28,7 +28,7 @@ class Contactview extends Component {
               <h4 className="txt-sm">Developing talent at Boréal</h4>
               <h2 className="txt-bg">Work With Us !</h2>
               <hr className="org-line" />
-              <p className="para">
+              <div className="para">
                 Are you passionate about coffee? Do you enjoy working in a
                 young, dynamic organisation? <br /> Whether you already have
                 experience with specialty coffee and barista talents or are
@@ -53,7 +53,7 @@ class Contactview extends Component {
                 Please send us an email at{' '}
                 <span className="txt-sm bold">admin@borealcoffee.ch</span> with
                 your CV, a cover letter (PDF format) and your availabilities.
-              </p>
+              </div>
             </div>
           </div>
           <div className="right-cont">

@@ -60,8 +60,7 @@ class Homeview extends React.Component {
                 `From an abandoned storage space to a convivial meeting place
               in the heart of Geneva, our first café opened in April 2009
               at Rue du Stand 60.`,
-                <br />,
-                <br />,
+
                 ` 
               Now in 3 locations in Geneva and 2 locations in Zürich,
               customers can expect an amazing experience from bean to cup.
@@ -69,8 +68,7 @@ class Homeview extends React.Component {
               coffee beans from farmers around the world, directly traded,
               and roasted with love each week in our artisanal roastery in
               Carouge.`,
-                <br />,
-                <br />,
+
                 ` 
               Boréal Coffee expose photos of Léonard Fisch.`,
               ]}
@@ -89,10 +87,7 @@ class Homeview extends React.Component {
               team of dedicated roasters works to match the profiles of
               the green coffee beans we import with a roast that brings
               out their best characteristics.`,
-                <br />,
-                <br />,
                 ` 
-            
               And, knowing that we work directly with the farmers
               themselves wherever possible to ensure better livelihoods
               while caring for the environment, your beverage is one to

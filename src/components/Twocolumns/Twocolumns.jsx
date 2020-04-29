@@ -13,7 +13,8 @@ class Twocolumns extends Component {
       hasBtn,
       inverted,
       noExtra,
-      navlink
+      navlink,
+      address,
     } = this.props
     return (
       <div className="two-cols">
@@ -32,16 +33,20 @@ class Twocolumns extends Component {
             <h2 className="txt-bg">{mainHead}</h2>
             <hr className="org-line" />
             <p className="para">
-              {/* {detail.map((ele, idx) => (
-                <span key={idx}>{ele}</span>
-              ))} */}
-              {detail}
+              {detail.map((ele, idx) => (
+                <React.Fragment key={idx}>
+                  <span>{ele}</span>
+                  {idx < detail.length - 1 ? (
+                    <>
+                      <br />
+                      <br />
+                    </>
+                  ) : null}
+                </React.Fragment>
+              ))}
             </p>
             {noExtra === true ? null : hasBtn ? (
-              <Link
-                to={navlink}
-                className="nav"
-              >
+              <Link to={navlink} className="nav">
                 <span className="txt">DISCOVER {mainHead}</span>
                 <img
                   src={require('../../assets/icons/right-arrow.png')}
@@ -54,7 +59,7 @@ class Twocolumns extends Component {
                 <div className="upper">
                   <h4 className="title">ADDRESS</h4>
                 </div>
-                <p className="plane">Rue du Stand 60 1204 Geneva</p>
+                <p className="plane">{address}</p>
               </div>
             )}
           </div>

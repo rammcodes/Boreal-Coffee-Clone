@@ -31,7 +31,7 @@ class Sublocationview extends Component {
   }
 
   render() {
-    const { sublocation } = this.state;
+    const { sublocation } = this.state
 
     if (!sublocation) {
       return null
@@ -50,9 +50,8 @@ class Sublocationview extends Component {
           mainHead={sublocation.name}
           subHead={sublocation.title}
           img={sublocation.colImg}
-          detail={
-            'The Boréal Coffee Rue du Stand is our first coffee shop and our flagship. Our café is a mix of bold colours and smooth music so you can relax with colleagues or friends while drinking one of our may beverages on offer.'
-          }
+          address={sublocation.address}
+          detail={sublocation.detail}
           hasBtn={false}
         />
         <Brandhighlight />

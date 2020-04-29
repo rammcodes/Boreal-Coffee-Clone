@@ -54,7 +54,10 @@ class Sublocationview extends Component {
           detail={sublocation.detail}
           hasBtn={false}
         />
-        <Brandhighlight />
+        <Brandhighlight
+          mainHead={sublocation.name}
+          subHead={sublocation.title}
+        />
         <Locationhighlight />
       </div>
     )

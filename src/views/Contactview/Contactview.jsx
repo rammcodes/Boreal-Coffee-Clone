@@ -95,7 +95,10 @@ class Contactview extends Component {
             </div>
           </div>
         </div>
-        <Brandhighlight />
+        <Brandhighlight
+          mainHead={'Across and beyond Geneva'}
+          subHead={'Discover the Boréal Coffee shops'}
+        />
         <Shortheader
           mainHead={'A perfect coffee cup always awaits for you'}
           subHead={

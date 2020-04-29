@@ -22,8 +22,13 @@ class Mainlocationview extends Component {
     this.setState({ location: null })
   }
 
+  onMainLocationClick = (id) => {
+    this.props.history.push(`/mainlocation/${id}`)
+  }
+
   render() {
     const { location } = this.state
+    const { mlid } = this.props.match.params
 
     if (!location) {
       return null
@@ -42,9 +47,19 @@ class Mainlocationview extends Component {
             </div>
             <h3 className="sub-txt">choose between our locations</h3>
             <div className="loc-opts">
-              <h1 className="txt-bg active">GENEVA</h1>
+              <h1
+                className={`txt-bg ${mlid === '1' ? 'active' : null}`}
+                onClick={() => this.onMainLocationClick(1)}
+              >
+                GENEVA
+              </h1>
               <h4 className="txt-sm">OR</h4>
-              <h1 className="txt-bg">ZURICH</h1>
+              <h1
+                className={`txt-bg ${mlid === '2' ? 'active' : null}`}
+                onClick={() => this.onMainLocationClick(2)}
+              >
+                ZURICH
+              </h1>
             </div>
             <div className="hdr-bottom">
               <div className="img-cont">
@@ -76,4 +91,4 @@ class Mainlocationview extends Component {
   }
 }
 
-export default Mainlocationview;
+export default Mainlocationview

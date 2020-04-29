@@ -86,7 +86,10 @@ class Coffeecateringview extends Component {
             hasBtn
           />
         </div>
-        <Brandhighlight />
+        <Brandhighlight
+          mainHead={'happy customers, successful events'}
+          subHead={'PHOTOS FROM OUR CATERINGS'}
+        />
         <Locationhighlight />
       </div>
     )

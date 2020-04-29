@@ -4,6 +4,7 @@ import './Brandhighlight.scss'
 class Brandhighlight extends Component {
   state = {}
   render() {
+    const { subHead, mainHead } = this.props
     return (
       <div className="brand-highlight">
         <div className="container">
@@ -15,8 +16,8 @@ class Brandhighlight extends Component {
                 className="logo"
               />
             </div>
-            <h3 className="txt-sm">The Flagship</h3>
-            <div className="txt-bg">RUE DU STAND</div>
+            <h3 className="txt-sm">{subHead}</h3>
+            <div className="txt-bg">{mainHead}</div>
           </div>
         </div>
       </div>

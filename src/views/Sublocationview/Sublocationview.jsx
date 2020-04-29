@@ -40,7 +40,7 @@ class Sublocationview extends Component {
     return (
       <div className="sublocationview">
         <Shortheader
-          subHead={'Our very first shop and flagship'}
+          subHead={sublocation.tag}
           mainHead={sublocation.title}
           text={'Our café is a mix of bold colours and smooth music'}
           img={sublocation.headerBg}

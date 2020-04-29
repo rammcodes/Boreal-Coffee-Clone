@@ -28,8 +28,8 @@ class Coffeecateringview extends Component {
           <Twocolumns
             inverted={false}
             noExtra={true}
-            mainHead={'COFFEE SHOPS'}
-            subHead={'THE STORY OF OUR'}
+            mainHead={'Bespoke event caterings'}
+            subHead={'From inception to execution'}
             detail={[
               `You are organizing an event and wish to offer your guests good coffee ? Then, you knocked on the right door !`,
               ` 
@@ -50,8 +50,8 @@ class Coffeecateringview extends Component {
           <Twocolumns
             inverted
             noExtra={true}
-            mainHead={'COFFEE SHOPS'}
-            subHead={'THE STORY OF OUR'}
+            mainHead={'La Marzocco'}
+            subHead={'Working only with the best since 2008'}
             detail={[
               `La Marzocco is our partner for coffee machines. These hand-made machines in Florence are amongst the best in the Specialty Coffee world.`,
 
@@ -69,8 +69,8 @@ class Coffeecateringview extends Component {
           <Twocolumns
             inverted={false}
             noExtra={true}
-            mainHead={'COFFEE SHOPS'}
-            subHead={'THE STORY OF OUR'}
+            mainHead={'Boréal Caterings'}
+            subHead={'Explore our complete offering'}
             detail={[
               `La Marzocco is our partner for coffee machines. These hand-made machines in Florence are amongst the best in the Specialty Coffee world.`,
 

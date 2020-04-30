@@ -5,14 +5,7 @@ import './Locationhighlight.scss'
 class Locationhighlight extends Component {
   state = {
     selectedImage: null,
-    images: [
-      'rds-1.jpg',
-      'rds-2.jpg',
-      'rds-3.jpg',
-      'rds-4.jpg',
-      'rds-5.jpg',
-      'rds-6.jpg',
-    ],
+    images: null,
   }
 
   onImageSelect = (idx) => {
@@ -50,8 +43,21 @@ class Locationhighlight extends Component {
   closeImageShowcase = () => {
     this.setState({ selectedImage: null })
   }
+
+  componentDidMount() {
+    const { images } = this.props
+
+    this.setState({
+      images,
+    })
+  }
+
   render() {
     const { selectedImage, images } = this.state
+
+    if (!images) {
+      return null
+    }
 
     return (
       <div className="location-highlight">
@@ -60,7 +66,11 @@ class Locationhighlight extends Component {
             <div className="img-showcase">
               <OutsideClickHandler onOutsideClick={this.closeImageShowcase}>
                 <div onClick={this.onNextImgClick} className="img-cont">
-                  <img src={require(`../../assets/img/${selectedImage.url}`)} alt="view" className="img" />
+                  <img
+                    src={require(`../../assets/img/${selectedImage.url}`)}
+                    alt="view"
+                    className="img"
+                  />
                 </div>
               </OutsideClickHandler>
             </div>
@@ -73,7 +83,11 @@ class Locationhighlight extends Component {
                 onClick={() => this.onImageSelect(idx)}
               >
                 <div className="shadow-layer"></div>
-                <img src={require(`../../assets/img/${img}`)} alt="location-img" className="img" />
+                <img
+                  src={require(`../../assets/img/${img}`)}
+                  alt="location-img"
+                  className="img"
+                />
               </div>
             ))}
           </div>

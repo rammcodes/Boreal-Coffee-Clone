@@ -90,7 +90,16 @@ class Coffeecateringview extends Component {
           mainHead={'happy customers, successful events'}
           subHead={'PHOTOS FROM OUR CATERINGS'}
         />
-        <Locationhighlight />
+        <Locationhighlight
+          images={[
+            'cc-1.jpg',
+            'cc-2.jpg',
+            'cc-3.jpg',
+            'cc-4.jpg',
+            'cc-5.jpg',
+            'cc-6.jpg',
+          ]}
+        />
       </div>
     )
   }

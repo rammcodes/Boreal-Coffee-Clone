@@ -58,7 +58,7 @@ class Sublocationview extends Component {
           mainHead={sublocation.name}
           subHead={sublocation.title}
         />
-        <Locationhighlight />
+        <Locationhighlight images={sublocation.locImages} />
       </div>
     )
   }

@@ -40,12 +40,12 @@ const locations = [
         headerBg: 'montb-hdr.jpg',
         address: 'Rue du Mont-Blanc 17 1201 Genève',
         locImages: [
-          'rds-1.jpg',
-          'rds-2.jpg',
-          'rds-3.jpg',
-          'rds-4.jpg',
-          'rds-5.jpg',
-          'rds-6.jpg',
+          'mb-1.jpg',
+          'mb-2.jpg',
+          'mb-3.jpg',
+          'mb-4.jpg',
+          'mb-5.jpg',
+          'mb-6.jpg',
         ],
       },
       {

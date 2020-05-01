@@ -79,7 +79,7 @@ class Coffeecateringview extends Component {
               `,
 
               `
-              We set up our coffee machines in your environment. All the technical specifications regarding the coffee machines will be provided to you prior to the event.
+              We set up our coffee machiness in your environment. All the technical specifications regarding the coffee machines will be provided to you prior to the event.
               `,
             ]}
             img={'coffee-beans.jpg'}

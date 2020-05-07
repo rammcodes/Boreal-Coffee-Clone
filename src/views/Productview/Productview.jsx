@@ -12,7 +12,7 @@ class Productview extends Component {
     showCaseProduct: false,
     cart: {
       included: false,
-      amount: null,
+      amount: 0,
     },
   }
 
@@ -23,7 +23,20 @@ class Productview extends Component {
       (prd) => prd.id.toString() === this.props.match.params.prdId.toString()
     )
 
-    this.setState({ currProduct: product })
+    let cart
+    if (window.localStorage.getItem(product.id)) {
+      let itemQty = window.localStorage.getItem(product.id)
+      cart = {
+        included: true,
+        amount: parseInt(itemQty),
+      }
+    } else {
+      cart = {
+        included: false,
+        amount: 0,
+      }
+    }
+    this.setState({ currProduct: product, cart })
   }
 
   limitProducts = (products) => {
@@ -31,12 +44,62 @@ class Productview extends Component {
     return limitedProducts
   }
 
+  onIncOrDecClick = (val) => {
+    const { currProduct } = this.state
+    if (val === 'inc') {
+      if (window.localStorage.getItem(currProduct.id)) {
+        let itemQty = window.localStorage.getItem(currProduct.id)
+        itemQty = parseInt(itemQty) + 1
+        let cartState = {
+          included: true,
+          amount: itemQty,
+        }
+        window.localStorage.setItem(currProduct.id, itemQty.toString())
+        this.setState({
+          cart: cartState,
+        })
+      } else {
+        window.localStorage.setItem(currProduct.id, '1')
+        let cartState = {
+          included: true,
+          amount: 1,
+        }
+        this.setState({
+          cart: cartState,
+        })
+      }
+    } else {
+      if (
+        window.localStorage.getItem(currProduct.id) &&
+        parseInt(window.localStorage.getItem(currProduct.id)) > 0
+      ) {
+        let itemQty = window.localStorage.getItem(currProduct.id)
+        itemQty = parseInt(itemQty) - 1
+        let cartState
+        if (itemQty < 1) {
+          cartState = {
+            included: false,
+            amount: 0,
+          }
+          window.localStorage.removeItem(currProduct.id)
+        } else {
+          cartState = {
+            included: true,
+            amount: itemQty,
+          }
+        }
+        window.localStorage.setItem(currProduct.id, itemQty.toString())
+        this.setState({ cart: cartState })
+      }
+    }
+  }
+
   toggleProductShowcase = (val) => {
     this.setState({ showCaseProduct: val })
   }
 
   render() {
-    const { products, currProduct, showCaseProduct } = this.state
+    const { products, currProduct, showCaseProduct, cart } = this.state
 
     if (!currProduct) {
       return null
@@ -114,16 +177,22 @@ class Productview extends Component {
                 <div className="qty-checkout">
                   <div className="text txt-big">QUANTITY:</div>
                   <div className="text txt-sm">QTY:</div>
-                  <div className="item-count">1</div>
+                  <div className="item-count">{cart.amount}</div>
                   <div className="inc-dec">
-                    <div className="inc">
+                    <div
+                      onClick={() => this.onIncOrDecClick('inc')}
+                      className="inc"
+                    >
                       <img
                         src={require('../../assets/icons/plus.png')}
                         alt="plus"
                         className="icon"
                       />
                     </div>
-                    <div className="dec">
+                    <div
+                      onClick={() => this.onIncOrDecClick('dec')}
+                      className="dec"
+                    >
                       <img
                         src={require('../../assets/icons/subtract.png')}
                         alt="subtract"
@@ -131,8 +200,14 @@ class Productview extends Component {
                       />
                     </div>
                   </div>
-                  <button className="cart-add">
-                    <span className="txt">ADD TO CART</span>
+                  <button
+                    className={`cart-add ${
+                      cart.included ? 'cart-add-succ' : ''
+                    }`}
+                  >
+                    <span className="txt">
+                      {cart.included ? 'ADDED TO CART' : 'ADD TO CART'}
+                    </span>
                     <img
                       src={require('../../assets/icons/right-arrow.png')}
                       alt="right-arrow"

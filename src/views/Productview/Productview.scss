@@ -122,14 +122,21 @@
             }
             .inc-dec {
               display: block;
+
               .inc,
               .dec {
                 height: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
+                transition: 0.3s;
                 .icon {
                   width: 13px;
+                }
+                &:hover {
+                  background: #f78f1e;
+                  color: #fff;
                 }
               }
               .inc {
@@ -145,6 +152,15 @@
               }
               .icon {
                 width: 20px;
+              }
+            }
+            .cart-add-succ {
+              background: #f78f1e;
+              .txt {
+                color: #fff;
+              }
+              .icon {
+                display: none;
               }
             }
           }

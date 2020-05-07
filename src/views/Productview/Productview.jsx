@@ -201,6 +201,9 @@ class Productview extends Component {
                     </div>
                   </div>
                   <button
+                    onClick={
+                      !cart.included ? () => this.onIncOrDecClick('inc') : null
+                    }
                     className={`cart-add ${
                       cart.included ? 'cart-add-succ' : ''
                     }`}

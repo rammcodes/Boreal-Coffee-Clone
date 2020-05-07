@@ -10,6 +10,10 @@ class Productview extends Component {
     products,
     currProduct: null,
     showCaseProduct: false,
+    cart: {
+      included: false,
+      amount: null,
+    },
   }
 
   componentDidMount() {
@@ -18,6 +22,7 @@ class Productview extends Component {
     let product = products.find(
       (prd) => prd.id.toString() === this.props.match.params.prdId.toString()
     )
+
     this.setState({ currProduct: product })
   }
 

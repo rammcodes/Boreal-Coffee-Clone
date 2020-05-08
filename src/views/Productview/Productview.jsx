@@ -74,8 +74,8 @@ class Productview extends Component {
         parseInt(window.localStorage.getItem(currProduct.id)) > 0
       ) {
         let itemQty = window.localStorage.getItem(currProduct.id)
-        itemQty = parseInt(itemQty) - 1
-        let cartState
+        itemQty = parseInt(itemQty) - 1;
+        let cartState;
         if (itemQty < 1) {
           cartState = {
             included: false,
@@ -87,8 +87,8 @@ class Productview extends Component {
             included: true,
             amount: itemQty,
           }
+          window.localStorage.setItem(currProduct.id, itemQty.toString())
         }
-        window.localStorage.setItem(currProduct.id, itemQty.toString())
         this.setState({ cart: cartState })
       }
     }

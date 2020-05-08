@@ -1,11 +1,14 @@
 import React from 'react'
 import './Topbar.scss'
 import { Link, withRouter } from 'react-router-dom'
+import products from '../../data/products'
 
 class Topbar extends React.Component {
   state = {
     showResMenu: false,
     scrolled: false,
+    showCart: false,
+    noUse: null,
   }
 
   resMenuClick = () => {
@@ -27,12 +30,48 @@ class Topbar extends React.Component {
   onNavDropdownClick = (url) => {
     this.setState({ showResMenu: false })
     this.props.history.push(url)
-    
+  }
+
+  onCartToggle = (val) => {
+    this.setState({ showCart: val })
+  }
+
+  getCartItems = () => {
+    const { localStorage } = window
+    let items = []
+    for (let i = 0; i < localStorage.length; i++) {
+      let item = products.find(
+        (prd) => prd.id.toString() === localStorage.key(i).toString()
+      )
+      items.push(item)
+    }
+    return items
+  }
+
+  getCartTotal = () => {
+    const { localStorage } = window
+    let total = 0
+    for (let i = 0; i < localStorage.length; i++) {
+      let item = products.find(
+        (prd) => prd.id.toString() === localStorage.key(i).toString()
+      )
+      let price = parseFloat(item.rate.split(' '))
+      total += price * localStorage.getItem(localStorage.key(i))
+    }
+    return total
+  }
+
+  removeCartItem = (id) => {
+    localStorage.removeItem(id)
+    this.setState({ noUse: null })
   }
 
   render() {
-    const { showResMenu, scrolled } = this.state
+    const { showResMenu, scrolled, showCart } = this.state
     const { topbarEffect } = this.props
+    const { localStorage } = window
+    const { getCartItems, onCartToggle, getCartTotal, removeCartItem } = this
+
     return (
       <nav
         className={`topbar ${
@@ -124,7 +163,11 @@ class Topbar extends React.Component {
             >
               <li className="item">CONTACT</li>
             </div>
-            <div className="item-container">
+            <div
+              onMouseOver={() => onCartToggle(true)}
+              onMouseLeave={() => onCartToggle(false)}
+              className="item-container"
+            >
               <li className="item">
                 {topbarEffect ? (
                   scrolled ? (
@@ -150,6 +193,47 @@ class Topbar extends React.Component {
 
                 <span className="txt">CART</span>
               </li>
+              {showCart ? (
+                <div className="dropdown">
+                  {localStorage.length ? (
+                    <div className="cont">
+                      {getCartItems().map((item, idx) => (
+                        <div key={idx} className="item">
+                          <div className="item-img-cont">
+                            <img
+                              src={require(`../../assets/img/ProductImages/${item.img}`)}
+                              alt="item"
+                              className="img"
+                            />
+                          </div>
+                          <div className="details">
+                            <h4 className="upper">{item.name}</h4>
+                            <span className="lower">
+                              {window.localStorage.getItem(item.id)} x{' '}
+                              {item.rate}{' '}
+                            </span>
+                          </div>
+                          <div
+                            onClick={() => removeCartItem(item.id)}
+                            className="close-cont"
+                          >
+                            <img
+                              src={require('../../assets/icons/close.png')}
+                              alt="close"
+                              className="icon"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="msg-cont">Your Cart is Empty</div>
+                  )}
+                  {localStorage.length ? (
+                    <div className="total">Total: {getCartTotal()} CHF</div>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
             <div className="item-container item-md">
               <li className="item">
@@ -269,7 +353,9 @@ class Topbar extends React.Component {
                 onClick={() => this.onNavDropdownClick('/brandstory')}
                 className="ele"
               >
-                <Link to='#' className="main-link">WHO WE ARE?</Link>
+                <Link to="#" className="main-link">
+                  WHO WE ARE?
+                </Link>
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/mainlocation/1')}

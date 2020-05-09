@@ -9,6 +9,7 @@ class Topbar extends React.Component {
     scrolled: false,
     showCart: false,
     noUse: null,
+    showResCart: false,
   }
 
   resMenuClick = () => {
@@ -34,6 +35,13 @@ class Topbar extends React.Component {
 
   onCartToggle = (val) => {
     this.setState({ showCart: val })
+  }
+
+  onResCartToggle = (val) => {
+    console.log('xx', val)
+    this.setState({
+      showResCart: val,
+    })
   }
 
   getCartItems = () => {
@@ -67,7 +75,7 @@ class Topbar extends React.Component {
   }
 
   render() {
-    const { showResMenu, scrolled, showCart } = this.state
+    const { showResMenu, scrolled, showCart, showResCart } = this.state
     const { topbarEffect } = this.props
     const { localStorage } = window
     const { getCartItems, onCartToggle, getCartTotal, removeCartItem } = this
@@ -275,7 +283,7 @@ class Topbar extends React.Component {
           </div>
           <div className="nav-items small">
             <div className="item-container">
-              <li className="item">
+              <li onClick={() => this.onResCartToggle(true)} className="item">
                 {topbarEffect ? (
                   scrolled ? (
                     <img
@@ -298,6 +306,63 @@ class Topbar extends React.Component {
                   />
                 )}
               </li>
+
+              {showResCart ? (
+                <div className="cart">
+                  {localStorage.length ? (
+                    <div className="cont">
+                      {getCartItems().map((item, idx) => (
+                        <div key={idx} className="item">
+                          <div className="item-img-cont">
+                            <img
+                              src={require(`../../assets/img/ProductImages/${item.img}`)}
+                              alt="item"
+                              className="img"
+                            />
+                          </div>
+                          <div className="details">
+                            <h4 className="name">{item.name}</h4>
+                            <h4 className="calc">
+                              {window.localStorage.getItem(item.id)} x{' '}
+                              {item.rate}{' '}
+                            </h4>
+                          </div>
+                          <div
+                            onClick={() => removeCartItem(item.id)}
+                            className="close-cont"
+                          >
+                            <img
+                              src={require('../../assets/icons/close.png')}
+                              alt="close"
+                              className="icon"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="msg-cont">Your Cart is Empty</div>
+                  )}
+                  {localStorage.length ? (
+                    <>
+                      <div className="total">Total: {getCartTotal()} CHF</div>
+                      <div className="checkout-cont">
+                        <button className="checkout">CHECKOUT</button>
+                      </div>
+                      <div
+                        onClick={() => this.onResCartToggle(false)}
+                        className="close"
+                      >
+                        <img
+                          src={require('../../assets/icons/close.png')}
+                          alt="close"
+                          className="icon"
+                        />
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
             <div className="item-container">
               <li className="item">

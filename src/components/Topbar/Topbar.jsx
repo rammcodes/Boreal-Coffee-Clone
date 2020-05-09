@@ -349,18 +349,18 @@ class Topbar extends React.Component {
                       <div className="checkout-cont">
                         <button className="checkout">CHECKOUT</button>
                       </div>
-                      <div
-                        onClick={() => this.onResCartToggle(false)}
-                        className="close"
-                      >
-                        <img
-                          src={require('../../assets/icons/close.png')}
-                          alt="close"
-                          className="icon"
-                        />
-                      </div>
                     </>
                   ) : null}
+                  <div
+                    onClick={() => this.onResCartToggle(false)}
+                    className="close"
+                  >
+                    <img
+                      src={require('../../assets/icons/close.png')}
+                      alt="close"
+                      className="icon"
+                    />
+                  </div>
                 </div>
               ) : null}
             </div>

@@ -230,7 +230,12 @@ class Topbar extends React.Component {
                     <div className="msg-cont">Your Cart is Empty</div>
                   )}
                   {localStorage.length ? (
-                    <div className="total">Total: {getCartTotal()} CHF</div>
+                    <>
+                      <div className="total">Total: {getCartTotal()} CHF</div>
+                      <div className="checkout-cont">
+                        <button className="checkout">CHECKOUT</button>
+                      </div>
+                    </>
                   ) : null}
                 </div>
               ) : null}

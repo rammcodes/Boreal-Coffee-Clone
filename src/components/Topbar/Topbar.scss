@@ -80,7 +80,7 @@
           position: absolute;
           top: calc(100% + 1px);
           min-width: 300px;
-          padding: 20px 10px;
+          padding: 20px 10px 12px 10px;
           background-color: rgba(0, 0, 0, 0.9);
           transform: translate(-25%);
           border: 1px solid #fff;
@@ -144,6 +144,19 @@
             text-align: right;
             font-size: 1.3rem;
             padding: 15px 20px 0 20px;
+          }
+          .checkout-cont {
+            padding: 15px 0px 0px 0px;
+            font-family: inherit;
+            .checkout {
+              width: 100%;
+              border: none;
+              padding: 15px 0;
+              text-align: center;
+              background: #f78f1e;
+              color: #fff;
+              font-size: 1.2rem;
+            }
           }
           .msg-cont {
             text-align: center;

@@ -14,6 +14,7 @@ class Productview extends Component {
       included: false,
       amount: 0,
     },
+    noUse: null,
   }
 
   componentDidMount() {
@@ -37,6 +38,26 @@ class Productview extends Component {
       }
     }
     this.setState({ currProduct: product, cart })
+    this.track = setInterval(() => {
+      const { currProduct } = this.state
+      if (window.localStorage.getItem(currProduct.id)) {
+        let cart = {
+          included: true,
+          amount: window.localStorage.getItem(currProduct.id),
+        }
+        this.setState({ cart })
+      } else {
+        let cart = {
+          included: false,
+          amount: 0,
+        }
+        this.setState({ cart })
+      }
+    }, 100)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.track)
   }
 
   limitProducts = (products) => {
@@ -74,8 +95,8 @@ class Productview extends Component {
         parseInt(window.localStorage.getItem(currProduct.id)) > 0
       ) {
         let itemQty = window.localStorage.getItem(currProduct.id)
-        itemQty = parseInt(itemQty) - 1;
-        let cartState;
+        itemQty = parseInt(itemQty) - 1
+        let cartState
         if (itemQty < 1) {
           cartState = {
             included: false,

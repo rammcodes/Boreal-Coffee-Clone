@@ -6,16 +6,44 @@ import './Shopview.scss'
 
 class Shopview extends Component {
   state = {
-    products,
+    products: null,
+    selectedCat: 'all',
   }
 
   componentDidMount() {
     window.scroll(0, 0)
     this.props.topbarEffectToggle(false)
+    this.setCat()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { selectedCat } = this.state
+    if (selectedCat !== prevState.selectedCat) {
+      this.setCat()
+    }
+  }
+
+  setCat = () => {
+    const { selectedCat } = this.state
+    if (selectedCat === 'all') {
+      this.setState({ products })
+    } else {
+      let filteredProducts = products.filter(
+        (prd) => prd.category === selectedCat
+      )
+      this.setState({ products: filteredProducts })
+    }
+  }
+
+  onChangeCat = (catName) => {
+    this.setState({ selectedCat: catName })
   }
 
   render() {
-    const { products } = this.state
+    const { products, selectedCat } = this.state
+
+    if (!products) return null
+
     return (
       <div className="shopview">
         <Routeinfo />
@@ -32,10 +60,36 @@ class Shopview extends Component {
             <div className="sort">
               <h4 className="txt">SORT PRODUCTS BY:</h4>
               <ul className="sort-by-list">
-                <li className="item active">ALL</li>
-                <li className="item">FILTER</li>
-                <li className="item">ESPRESSO</li>
-                <li className="item">MERCHANDISE</li>
+                <li
+                  className={`item ${selectedCat === 'all' ? ' active' : ''}`}
+                  onClick={() => this.onChangeCat('all')}
+                >
+                  ALL
+                </li>
+                <li
+                  className={`item ${
+                    selectedCat === 'filter' ? ' active' : ''
+                  }`}
+                  onClick={() => this.onChangeCat('filter')}
+                >
+                  FILTER
+                </li>
+                <li
+                  className={`item ${
+                    selectedCat === 'espresso' ? ' active' : ''
+                  }`}
+                  onClick={() => this.onChangeCat('espresso')}
+                >
+                  ESPRESSO
+                </li>
+                <li
+                  className={`item ${
+                    selectedCat === 'merchandise' ? ' active' : ''
+                  }`}
+                  onClick={() => this.onChangeCat('merchandise')}
+                >
+                  MERCHANDISE
+                </li>
               </ul>
             </div>
           </div>

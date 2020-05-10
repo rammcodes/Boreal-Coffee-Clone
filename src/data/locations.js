@@ -2,7 +2,7 @@ const locations = [
   {
     id: 1,
     name: 'GENEVA',
-    map: '../../assets/img/geneva-map.png',
+    map: 'geneva-map.png',
     subLocns: [
       {
         id: 1,
@@ -60,10 +60,34 @@ const locations = [
         colImg: 'ev-col.jpg',
         headerBg: 'ev-hdr.jpg',
         address: 'Rue Jargonnant 5 1207 Geneva',
+        locImages: ['ev-1.jpg', 'ev-2.jpg', 'ev-3.jpg'],
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'ZURICH',
+    map: 'zurich-map.png',
+    subLocns: [
+      {
+        id: 1,
+        name: 'TALACKER',
+        title: 'Boréal Coffee, Talacker',
+        tag: 'Launched October 2016',
+        detail: [
+          'The Boréal Coffee Rue du Stand is our first coffee shop and our flagship. Our café is a mix of bold colours and smooth music so you can relax with colleagues or friends while drinking one of our many beverages and pastries on offer.',
+        ],
+        img: 'rue-du-stand.jpg',
+        colImg: 'talacker-col.jpg',
+        headerBg: 'talacker-hdr.jpg',
+        address: 'Rue du Stand 60 1204 Geneva',
         locImages: [
-          'ev-1.jpg',
-          'ev-2.jpg',
-          'ev-3.jpg',
+          'tkr-1.jpg',
+          'tkr-2.jpeg',
+          'tkr-3.jpg',
+          'tkr-4.jpg',
+          'tkr-5.jpg',
+          'tkr-6.jpg',
         ],
       },
     ],

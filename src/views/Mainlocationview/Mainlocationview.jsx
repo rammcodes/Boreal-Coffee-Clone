@@ -9,13 +9,13 @@ class Mainlocationview extends Component {
   }
 
   componentDidMount() {
-    const { mlid } = this.props.match.params
-    window.scroll(0, 0)
-    this.props.topbarEffectToggle(true)
-    let selectedLoc = locations.find(
-      (l, i) => l.id.toString() === mlid.toString()
-    )
-    this.setState({ location: selectedLoc })
+    this.initialCall()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.mlid !== this.props.match.params.mlid) {
+      this.initialCall()
+    }
   }
 
   componentWillUnmount() {
@@ -24,6 +24,16 @@ class Mainlocationview extends Component {
 
   onMainLocationClick = (id) => {
     this.props.history.push(`/mainlocation/${id}`)
+  }
+
+  initialCall = () => {
+    const { mlid } = this.props.match.params
+    window.scroll(0, 0)
+    this.props.topbarEffectToggle(true)
+    let selectedLoc = locations.find(
+      (l, i) => l.id.toString() === mlid.toString()
+    )
+    this.setState({ location: selectedLoc })
   }
 
   render() {
@@ -40,7 +50,7 @@ class Mainlocationview extends Component {
           <div className="container">
             <div className="map-cont">
               <img
-                src={require('../../assets/img/geneva-map.png')}
+                src={require(`../../assets/img/${location.map}`)}
                 alt="map"
                 className="map"
               />

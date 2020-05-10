@@ -18,42 +18,8 @@ class Productview extends Component {
   }
 
   componentDidMount() {
-    window.scroll(0, 0)
     this.props.topbarEffectToggle(false)
-    let product = products.find(
-      (prd) => prd.id.toString() === this.props.match.params.prdId.toString()
-    )
-
-    let cart
-    if (window.localStorage.getItem(product.id)) {
-      let itemQty = window.localStorage.getItem(product.id)
-      cart = {
-        included: true,
-        amount: parseInt(itemQty),
-      }
-    } else {
-      cart = {
-        included: false,
-        amount: 0,
-      }
-    }
-    this.setState({ currProduct: product, cart })
-    this.track = setInterval(() => {
-      const { currProduct } = this.state
-      if (window.localStorage.getItem(currProduct.id)) {
-        let cart = {
-          included: true,
-          amount: window.localStorage.getItem(currProduct.id),
-        }
-        this.setState({ cart })
-      } else {
-        let cart = {
-          included: false,
-          amount: 0,
-        }
-        this.setState({ cart })
-      }
-    }, 100)
+    this.intialCall()
   }
 
   componentWillUnmount() {
@@ -113,6 +79,51 @@ class Productview extends Component {
         this.setState({ cart: cartState })
       }
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.prdId !== this.props.match.params.prdId) {
+      clearInterval(this.track)
+      this.intialCall()
+    }
+  }
+
+  intialCall = () => {
+    window.scroll(0, 0)
+    let product = products.find(
+      (prd) => prd.id.toString() === this.props.match.params.prdId.toString()
+    )
+
+    let cart
+    if (window.localStorage.getItem(product.id)) {
+      let itemQty = window.localStorage.getItem(product.id)
+      cart = {
+        included: true,
+        amount: parseInt(itemQty),
+      }
+    } else {
+      cart = {
+        included: false,
+        amount: 0,
+      }
+    }
+    this.setState({ currProduct: product, cart })
+    this.track = setInterval(() => {
+      const { currProduct } = this.state
+      if (window.localStorage.getItem(currProduct.id)) {
+        let cart = {
+          included: true,
+          amount: window.localStorage.getItem(currProduct.id),
+        }
+        this.setState({ cart })
+      } else {
+        let cart = {
+          included: false,
+          amount: 0,
+        }
+        this.setState({ cart })
+      }
+    }, 100)
   }
 
   toggleProductShowcase = (val) => {

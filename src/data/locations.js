@@ -90,6 +90,27 @@ const locations = [
           'tkr-6.jpg',
         ],
       },
+      {
+        id: 2,
+        name: 'OERLIKON',
+        title: 'Boréal Coffee, Oerlikon',
+        tag: 'Launched January 2017',
+        detail: [
+          'The Boréal Coffee Rue du Stand is our first coffee shop and our flagship. Our café is a mix of bold colours and smooth music so you can relax with colleagues or friends while drinking one of our many beverages and pastries on offer.',
+        ],
+        img: 'rue-du-stand.jpg',
+        colImg: 'oer-col.jpg',
+        headerBg: 'oer-hdr.jpg',
+        address: 'Rue du Stand 60 1204 Geneva',
+        locImages: [
+          'oer-1.jpg',
+          'oer-2.jpg',
+          'oer-3.jpg',
+          'oer-4.jpg',
+          'oer-5.jpg',
+          'oer-6.jpg',
+        ],
+      },
     ],
   },
 ]

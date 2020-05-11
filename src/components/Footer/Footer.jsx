@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container">
           <div className="img-cont">
             <img
-              src="http://www.borealcoffee.ch/design/themes/boreal/assets/dist/images/content/boreal-coffee.png"
+              src={require('../../assets/img/coffee-packs.png')}
               alt="coffee"
               className="coffee"
             />
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="footer-hls">
             <div className="brand-logo-cont">
               <img
-                src="http://www.borealcoffee.ch/design/themes/boreal/assets/dist/images/logo-footer.png"
+                src={require("../../assets/img/black-logo.png")}
                 alt="brand-logo"
                 className="logo"
               />
@@ -78,14 +78,12 @@ const Footer = () => {
                   <h4 className="title">LANGUAGE</h4>
                   <select>
                     <option value="en">EN</option>
-                    <option value="fr">FR</option>
                   </select>
                 </div>
                 <div className="curr">
                   <h4 className="title">CURRENCY</h4>
                   <select>
                     <option value="chf">CHF</option>
-                    <option value="eur">EUR</option>
                   </select>
                 </div>
               </div>

@@ -136,7 +136,7 @@ class Topbar extends React.Component {
             </div>
 
             <div
-              onClick={() => this.onNavDropdownClick('/shop')}
+              onClick={() => this.onNavDropdownClick('/shop/all')}
               className="item-container"
             >
               <li className="item">
@@ -148,13 +148,13 @@ class Topbar extends React.Component {
                 />
               </li>
               <ul className="item-dropdown">
-                <Link to="/shop" className="item-drop-ele">
+                <Link to="/shop/filter" className="item-drop-ele">
                   FILTER
                 </Link>
-                <Link to="/shop" className="item-drop-ele">
+                <Link to="/shop/espresso" className="item-drop-ele">
                   ESPRESSO
                 </Link>
-                <Link to="/shop" className="item-drop-ele">
+                <Link to="/shop/merchandise" className="item-drop-ele">
                   MERCHANDISE
                 </Link>
               </ul>

@@ -7,7 +7,7 @@ import './Shopview.scss'
 class Shopview extends Component {
   state = {
     products: null,
-    selectedCat: 'all',
+    selectedCat: null,
   }
 
   componentDidMount() {
@@ -25,17 +25,17 @@ class Shopview extends Component {
 
   setCat = () => {
     const { selectedCat } = this.state
-    if (selectedCat === 'all') {
-      this.setState({ products })
+    const { cat } = this.props.match.params
+    if (cat === 'all') {
+      this.setState({ products, selectedCat: cat })
     } else {
-      let filteredProducts = products.filter(
-        (prd) => prd.category === selectedCat
-      )
-      this.setState({ products: filteredProducts })
+      let filteredProducts = products.filter((prd) => prd.category === cat)
+      this.setState({ products: filteredProducts, cat: selectedCat })
     }
   }
 
   onChangeCat = (catName) => {
+    this.props.history.push(`/shop/${catName}`)
     this.setState({ selectedCat: catName })
   }
 

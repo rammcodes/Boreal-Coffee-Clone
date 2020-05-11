@@ -24,7 +24,7 @@ class Routes extends Component {
         />
         <Route
           exact
-          path="/shop"
+          path="/shop/:cat"
           render={(props) => (
             <Shopview {...props} topbarEffectToggle={topbarEffectToggle} />
           )}

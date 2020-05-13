@@ -23,7 +23,7 @@ class Homeview extends React.Component {
                 />
               </div>
               <div className="header-nav-guide">
-                <Link to="/shop" className="nav-btn">
+                <Link to="/mainlocation/1" className="nav-btn">
                   <span className="text">DISCOVER BOREAL</span>
                   <img
                     src={require('../../assets/icons/right-arrow.png')}
@@ -31,7 +31,7 @@ class Homeview extends React.Component {
                     className="rt-arrow"
                   />
                 </Link>
-                <Link to="/shop" className="nav-btn">
+                <Link to="/shop/all" className="nav-btn">
                   <span className="text">VISIT OUR WEBSHOP</span>
                   <img
                     src={require('../../assets/icons/right-arrow.png')}

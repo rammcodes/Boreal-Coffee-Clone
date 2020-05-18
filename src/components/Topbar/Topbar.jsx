@@ -469,7 +469,7 @@ class Topbar extends React.Component {
                 </div> */}
               </div>
               <div
-                onClick={() => this.onNavDropdownClick('/shop')}
+                onClick={() => this.onNavDropdownClick('/shop/all')}
                 className="ele"
               >
                 <Link to="#" className="main-link sub-main-link">

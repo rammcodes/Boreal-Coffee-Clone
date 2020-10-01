@@ -38,7 +38,6 @@ class Topbar extends React.Component {
   }
 
   onResCartToggle = (val) => {
-    console.log('xx', val)
     this.setState({
       showResCart: val,
     })

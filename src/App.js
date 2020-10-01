@@ -13,6 +13,12 @@ class App extends React.Component {
     this.setState({ topbarEffect: val })
   }
 
+  componentDidMount() {
+    if (!window.localStorage.cartItems) {
+      window.localStorage.setItem('cartItems', JSON.stringify([]))
+    }
+  }
+
   render() {
     return (
       <div className="app">

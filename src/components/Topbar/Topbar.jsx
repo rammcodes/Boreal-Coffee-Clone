@@ -57,6 +57,7 @@ class Topbar extends React.Component {
 
   getCartTotal = () => {
     const { localStorage } = window
+    return null;
     let total = 0
     for (let i = 0; i < localStorage.length; i++) {
       let item = products.find(
@@ -202,7 +203,7 @@ class Topbar extends React.Component {
               </li>
               {showCart ? (
                 <div className="dropdown">
-                  {localStorage.length ? (
+                  {JSON.parse(localStorage.cartItems).length ? (
                     <div className="cont">
                       {getCartItems().map((item, idx) => (
                         <div key={idx} className="item">

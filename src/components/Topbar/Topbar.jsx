@@ -58,15 +58,15 @@ class Topbar extends React.Component {
   getCartTotal = () => {
     const { localStorage } = window
     return null;
-    let total = 0
-    for (let i = 0; i < localStorage.length; i++) {
-      let item = products.find(
-        (prd) => prd.id.toString() === localStorage.key(i).toString()
-      )
-      let price = parseFloat(item.rate.split(' '))
-      total += price * localStorage.getItem(localStorage.key(i))
-    }
-    return total
+    // let total = 0
+    // for (let i = 0; i < localStorage.length; i++) {
+    //   let item = products.find(
+    //     (prd) => prd.id.toString() === localStorage.key(i).toString()
+    //   )
+    //   let price = parseFloat(item.rate.split(' '))
+    //   total += price * localStorage.getItem(localStorage.key(i))
+    // }
+    // return total
   }
 
   removeCartItem = (id) => {

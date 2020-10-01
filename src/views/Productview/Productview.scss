@@ -76,6 +76,7 @@
                 color: #f78f1e;
                 display: flex;
                 align-items: center;
+                font-weight: bold;
                 .icon-cont {
                   width: 20px;
                   .icon {
@@ -92,7 +93,7 @@
             .detail-cont {
               margin: 30px 0 0 0;
               .detail {
-                font-weight: lighter;
+                color: #888;
                 line-height: 26px;
                 font-size: 0.9rem;
               }

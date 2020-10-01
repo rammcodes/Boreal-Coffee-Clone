@@ -44,20 +44,20 @@ class Topbar extends React.Component {
   }
 
   getCartItems = () => {
-    const { localStorage } = window
+    //  const { localStorage } = window
     let items = []
-    for (let i = 0; i < localStorage.length; i++) {
-      let item = products.find(
-        (prd) => prd.id.toString() === localStorage.key(i).toString()
-      )
-      items.push(item)
-    }
+    // for (let i = 0; i < localStorage.length; i++) {
+    //   let item = products.find(
+    //     (prd) => prd.id.toString() === localStorage.key(i).toString()
+    //   )
+    //   items.push(item)
+    // }
     return items
   }
 
   getCartTotal = () => {
     //const { localStorage } = window
-    return null;
+    return null
     // let total = 0
     // for (let i = 0; i < localStorage.length; i++) {
     //   let item = products.find(
@@ -309,7 +309,7 @@ class Topbar extends React.Component {
 
               {showResCart ? (
                 <div className="cart">
-                  {localStorage.length ? (
+                  {Object.keys(localStorage.cartItems).length ? (
                     <div className="cont">
                       {getCartItems().map((item, idx) => (
                         <div key={idx} className="item">

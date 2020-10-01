@@ -15,7 +15,7 @@ class App extends React.Component {
 
   componentDidMount() {
     if (!window.localStorage.cartItems) {
-      window.localStorage.setItem('cartItems', JSON.stringify([]))
+      window.localStorage.setItem('cartItems', JSON.stringify({}))
     }
   }
 

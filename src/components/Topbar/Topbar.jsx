@@ -1,7 +1,7 @@
 import React from 'react'
 import './Topbar.scss'
 import { Link, withRouter } from 'react-router-dom'
-import products from '../../data/products'
+//import products from '../../data/products'
 
 class Topbar extends React.Component {
   state = {

@@ -56,7 +56,7 @@ class Topbar extends React.Component {
   }
 
   getCartTotal = () => {
-    const { localStorage } = window
+    //const { localStorage } = window
     return null;
     // let total = 0
     // for (let i = 0; i < localStorage.length; i++) {

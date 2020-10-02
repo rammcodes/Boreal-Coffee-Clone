@@ -1,7 +1,7 @@
 import React from 'react'
 import './Topbar.scss'
 import { Link, withRouter } from 'react-router-dom'
-//import products from '../../data/products'
+import products from '../../data/products'
 
 class Topbar extends React.Component {
   state = {
@@ -44,33 +44,36 @@ class Topbar extends React.Component {
   }
 
   getCartItems = () => {
-    //  const { localStorage } = window
+    const cartItems = Object.keys(JSON.parse(localStorage.cartItems))
     let items = []
-    // for (let i = 0; i < localStorage.length; i++) {
-    //   let item = products.find(
-    //     (prd) => prd.id.toString() === localStorage.key(i).toString()
-    //   )
-    //   items.push(item)
-    // }
+    for (let i = 0; i < cartItems.length; i++) {
+      let item = products.find(
+        (prd) => prd.id.toString() === cartItems[i].toString()
+      )
+      items.push(item)
+    }
     return items
   }
 
   getCartTotal = () => {
-    //const { localStorage } = window
-    return null
-    // let total = 0
-    // for (let i = 0; i < localStorage.length; i++) {
-    //   let item = products.find(
-    //     (prd) => prd.id.toString() === localStorage.key(i).toString()
-    //   )
-    //   let price = parseFloat(item.rate.split(' '))
-    //   total += price * localStorage.getItem(localStorage.key(i))
-    // }
-    // return total
+    const { localStorage } = window
+    const cartItems = Object.keys(JSON.parse(localStorage.cartItems))
+    let total = 0
+    for (let i = 0; i < cartItems.length; i++) {
+      let item = products.find(
+        (prd) => prd.id.toString() === cartItems[i].toString()
+      )
+      let price = parseFloat(item.rate.split(' '))
+      total +=
+        price * parseInt(JSON.parse(localStorage.cartItems)[cartItems[i]])
+    }
+    return total
   }
 
   removeCartItem = (id) => {
-    localStorage.removeItem(id)
+    let cartItems = JSON.parse(localStorage.cartItems)
+    delete cartItems[id]
+    window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
     this.setState({ noUse: null })
   }
 
@@ -203,7 +206,7 @@ class Topbar extends React.Component {
               </li>
               {showCart ? (
                 <div className="dropdown">
-                  {JSON.parse(localStorage.cartItems).length ? (
+                  {Object.keys(JSON.parse(localStorage.cartItems)).length ? (
                     <div className="cont">
                       {getCartItems().map((item, idx) => (
                         <div key={idx} className="item">
@@ -217,8 +220,12 @@ class Topbar extends React.Component {
                           <div className="details">
                             <h4 className="upper">{item.name}</h4>
                             <span className="lower">
-                              {window.localStorage.getItem(item.id)} x{' '}
-                              {item.rate}{' '}
+                              {
+                                JSON.parse(window.localStorage.cartItems)[
+                                  item.id
+                                ]
+                              }{' '}
+                              x {item.rate}{' '}
                             </span>
                           </div>
                           <div
@@ -323,8 +330,12 @@ class Topbar extends React.Component {
                           <div className="details">
                             <h4 className="name">{item.name}</h4>
                             <h4 className="calc">
-                              {window.localStorage.getItem(item.id)} x{' '}
-                              {item.rate}{' '}
+                              {
+                                JSON.parse(window.localStorage.cartItems)[
+                                  item.id
+                                ]
+                              }{' '}
+                              x {item.rate}{' '}
                             </h4>
                           </div>
                           <div
@@ -434,39 +445,6 @@ class Topbar extends React.Component {
                 <Link to="#" className="main-link sub-main-link">
                   CAFES
                 </Link>
-                {/* <div className="sub">
-                  <Link
-                    onClick={() => this.onNavDropdownClick('/cc')}
-                    to="#"
-                    className="sub-name"
-                  >
-                    GENEVA
-                  </Link>
-                   <Link to="#" className="sub-link">
-                    Rue du Stand
-                  </Link>
-                  <Link to="#" className="sub-link">
-                    Mont-Blanc 17
-                  </Link>
-                  <Link to="#" className="sub-link">
-                    Eaux-Vives
-                  </Link> 
-                </div> */}
-                {/* <div className="sub">
-                  <Link
-                    onClick={() => this.onNavDropdownClick('/mainlocation')}
-                    to="#"
-                    className="sub-name"
-                  >
-                    Zurich
-                  </Link>
-                  <Link to="#" className="sub-link">
-                    Talacker
-                  </Link>
-                  <Link to="#" className="sub-link">
-                    Oerlikon
-                  </Link> 
-                </div> */}
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/shop/all')}
@@ -475,29 +453,6 @@ class Topbar extends React.Component {
                 <Link to="#" className="main-link sub-main-link">
                   SHOP
                 </Link>
-                {/* <div className="sub">
-                  <Link
-                    onClick={() => this.onNavDropdownClick('/shop')}
-                    to="#"
-                    className="sub-link"
-                  >
-                    Filter
-                  </Link>
-                  <Link
-                    onClick={() => this.onNavDropdownClick('/shop')}
-                    to="#"
-                    className="sub-link"
-                  >
-                    Espresso
-                  </Link>
-                  <Link
-                    onClick={() => this.onNavDropdownClick('/shop')}
-                    to="#"
-                    className="sub-link"
-                  >
-                    Merchandise
-                  </Link>
-                </div> */}
               </div>
               <div
                 onClick={() => this.onNavDropdownClick('/cc')}
@@ -515,11 +470,7 @@ class Topbar extends React.Component {
                   CONTACT
                 </Link>
               </div>
-              {/* <div className="ele">
-                <Link to="#" className="main-link">
-                  TERMS & CONDITIONS
-                </Link>
-              </div> */}
+
               <div onClick={this.resMenuClick} className="close">
                 <img
                   src={require('../../assets/icons/close.png')}

@@ -33,20 +33,24 @@ class Productview extends Component {
 
   onIncOrDecClick = (val) => {
     const { currProduct } = this.state
+    let cartItems = JSON.parse(window.localStorage.cartItems)
+
     if (val === 'inc') {
-      if (window.localStorage.getItem(currProduct.id)) {
-        let itemQty = window.localStorage.getItem(currProduct.id)
+      if (cartItems[currProduct.id]) {
+        let itemQty = cartItems[currProduct.id]
         itemQty = parseInt(itemQty) + 1
         let cartState = {
           included: true,
           amount: itemQty,
         }
-        window.localStorage.setItem(currProduct.id, itemQty.toString())
+        cartItems[currProduct.id] += 1
+        window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
         this.setState({
           cart: cartState,
         })
       } else {
-        window.localStorage.setItem(currProduct.id, '1')
+        cartItems[currProduct.id] = 1
+        window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
         let cartState = {
           included: true,
           amount: 1,
@@ -56,11 +60,8 @@ class Productview extends Component {
         })
       }
     } else {
-      if (
-        window.localStorage.getItem(currProduct.id) &&
-        parseInt(window.localStorage.getItem(currProduct.id)) > 0
-      ) {
-        let itemQty = window.localStorage.getItem(currProduct.id)
+      if (cartItems[currProduct.id] && cartItems[currProduct.id] > 0) {
+        let itemQty = cartItems[currProduct.id]
         itemQty = parseInt(itemQty) - 1
         let cartState
         if (itemQty < 1) {
@@ -68,13 +69,15 @@ class Productview extends Component {
             included: false,
             amount: 0,
           }
-          window.localStorage.removeItem(currProduct.id)
+          delete cartItems[currProduct.id]
+          window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
         } else {
           cartState = {
             included: true,
             amount: itemQty,
           }
-          window.localStorage.setItem(currProduct.id, itemQty.toString())
+          cartItems[currProduct.id] -= 1
+          window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
         }
         this.setState({ cart: cartState })
       }
@@ -95,8 +98,8 @@ class Productview extends Component {
     )
 
     let cart
-    if (window.localStorage.getItem(product.id)) {
-      let itemQty = window.localStorage.getItem(product.id)
+    if (JSON.parse(localStorage.cartItems)[product.id]) {
+      let itemQty = JSON.parse(localStorage.cartItems)[product.id]
       cart = {
         included: true,
         amount: parseInt(itemQty),
@@ -110,10 +113,10 @@ class Productview extends Component {
     this.setState({ currProduct: product, cart })
     this.track = setInterval(() => {
       const { currProduct } = this.state
-      if (window.localStorage.getItem(currProduct.id)) {
+      if (JSON.parse(localStorage.cartItems)[currProduct.id]) {
         let cart = {
           included: true,
-          amount: window.localStorage.getItem(currProduct.id),
+          amount: JSON.parse(localStorage.cartItems)[currProduct.id],
         }
         this.setState({ cart })
       } else {
@@ -123,7 +126,7 @@ class Productview extends Component {
         }
         this.setState({ cart })
       }
-    }, 100)
+    }, 1000)
   }
 
   toggleProductShowcase = (val) => {

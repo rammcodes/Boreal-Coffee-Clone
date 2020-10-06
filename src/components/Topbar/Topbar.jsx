@@ -280,11 +280,11 @@ class Topbar extends React.Component {
                 )}
 
                 <span className="txt">ACCOUNT</span>
-                <img
+                {/* <img
                   src={require('../../assets/icons/down.png')}
                   alt="down"
                   className="down"
-                />
+                /> */}
               </li>
             </div>
           </div>
